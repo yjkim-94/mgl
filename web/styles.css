@@ -25,3 +25,16 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid 
 .hero{background-image:linear-gradient(90deg,rgba(16,24,44,.94),rgba(16,24,44,.64)),url('/assets/backgrounds/astelia-night.svg');background-size:cover;background-position:center}
 .brand-mark{display:inline-block;width:30px;height:30px;background:url('/assets/icons/star.svg') center/contain no-repeat;font-size:0}
 @media(prefers-reduced-motion:reduce){.track i{transition:none}}
+
+
+/* v1.9.6 title screen: independent from simulation state */
+.title-screen{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:24px;background:linear-gradient(125deg,#0b1227bb,#1d254d99),url('/assets/backgrounds/astelia-night.svg') center/cover no-repeat;text-align:center}
+.title-screen[hidden]{display:none}
+.title-inner{width:min(100%,620px);padding:clamp(24px,5vw,64px);border:1px solid #ffffff38;border-radius:24px;background:#101a36bb;box-shadow:0 20px 80px #03071580;backdrop-filter:blur(8px)}
+.title-kicker{font-size:11px;letter-spacing:.22em;color:var(--gold)}
+.title-inner h1{font-size:clamp(34px,7vw,65px);letter-spacing:.12em;margin:12px 0;color:#fff}
+.title-inner p{font-size:clamp(14px,3vw,19px);color:#dce6f7}
+.title-actions{display:flex;justify-content:center;gap:12px;margin:32px 0 16px;flex-wrap:wrap}
+.title-actions button{min-width:135px;min-height:48px}
+.title-inner small{color:#c0cbe0}
+@media(max-width:460px){.title-actions{flex-direction:column}.title-actions button{width:100%}}
