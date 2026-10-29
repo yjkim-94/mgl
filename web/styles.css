@@ -20,3 +20,8 @@
 /* v1.9 QA: compact viewport and keyboard focus improvements */
 @media(max-width:590px){.topbar{flex-wrap:wrap}.top-actions{width:100%;justify-content:flex-start}.action{flex-wrap:wrap}.action>div{min-width:0;overflow-wrap:anywhere}.action button{margin-left:auto}.npcs{grid-template-columns:minmax(0,1fr)}.stat-row{grid-template-columns:70px minmax(0,1fr) 68px}}
 button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* v1.9.6 vector artwork integration */
+.hero{background-image:linear-gradient(90deg,rgba(16,24,44,.94),rgba(16,24,44,.64)),url('/assets/backgrounds/astelia-night.svg');background-size:cover;background-position:center}
+.brand-mark{display:inline-block;width:30px;height:30px;background:url('/assets/icons/star.svg') center/contain no-repeat;font-size:0}
+@media(prefers-reduced-motion:reduce){.track i{transition:none}}
