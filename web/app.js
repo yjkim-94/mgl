@@ -192,3 +192,22 @@ function renderTutorial(s){
 }
 $('tutorial-toggle').addEventListener('click',()=>{tutorialCollapsed=!tutorialCollapsed;if(game)renderTutorial(game)});
 $('tutorial-dismiss').addEventListener('click',()=>{setTutorialSkipped(true);toast('튜토리얼을 건너뛰었습니다. 상단에서 다시 볼 수 있습니다.');});
+
+
+// v1.9.6: title screen is presentation-only until the player chooses a session.
+const TITLE_KEY='mgl_v196_title_seen';
+function hideTitle(){const t=$('title-screen');t.hidden=true;try{sessionStorage.setItem(TITLE_KEY,'1')}catch(_){}}
+function showTitle(){const t=$('title-screen');t.hidden=false;$('title-continue').focus()}
+function updateTitleStatus(){
+ const hasSave=!!snapshot;
+ $('title-continue').disabled=!hasSave;
+ $('title-save-status').textContent=hasSave?'이 기기의 자동 저장 기록을 이어서 플레이할 수 있습니다.':'자동 저장 기록이 없습니다. 새 게임을 시작하세요.';
+}
+$('title-continue').addEventListener('click',()=>{hideTitle();refresh().catch(e=>toast(e.message))});
+$('title-start').addEventListener('click',async()=>{
+ if(snapshot&&!confirm('현재 자동 저장 기록을 새 게임으로 덮어씁니다. 계속할까요?'))return;
+ try{await mutate('/api/new',{focus:'J01',seed:20261029,economy:'standard'},'새 게임이 시작되었습니다.');hideTitle();updateTitleStatus()}
+ catch(e){toast(e.message)}
+});
+updateTitleStatus();
+try{if(sessionStorage.getItem(TITLE_KEY)==='1')hideTitle()}catch(_){}
