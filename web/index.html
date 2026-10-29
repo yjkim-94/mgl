@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MGL · 별의 아이 육성 일지</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">✦</span><div><strong>MY GAY LIFE</strong><small>별의 아이 · 아스텔리아 성장 일지</small></div></div>
+  <div class="top-actions">
+    <button id="tutorial-restore" class="minimal" hidden>튜토리얼 다시 보기</button><button id="save" class="minimal">저장</button><button id="load" class="minimal">불러오기</button>
+    <button id="new" class="minimal">새 게임</button>
+  </div>
+</header>
+<section class="onboarding panel" id="onboarding" aria-label="첫 24개월 안내"><div class="panel-title"><h2>별의 아이 첫 24개월 안내</h2><button id="tutorial-toggle" class="minimal" aria-expanded="true">접기</button></div><p id="tutorial-message">처음 2년 동안 월별 선택과 자원 관리를 익힙니다. 정해진 정답은 없습니다.</p><div id="tutorial-progress" role="progressbar" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0"></div><ol id="tutorial-checklist"><li>목표 진로를 살펴보고, 이번 달에 사용할 행동을 선택하세요.</li><li>한 달 최대 8 AP, 4개 행동까지 가능합니다.</li><li>남은 AP가 있어도 다음 달로 넘어갈 수 있습니다.</li><li>휴식과 자금, NPC 관계를 함께 관리하세요.</li></ol><button id="tutorial-dismiss" class="minimal">튜토리얼 건너뛰기</button></section><main class="layout">
+  <section class="left-col">
+    <div class="hero panel">
+      <div class="tag" id="chapter">CHAPTER 01 · 새로운 시작</div>
+      <h1 id="age">10세 · 1월</h1>
+      <p id="narrative">별의 아이와 함께 보내는 아스텔리아의 첫 해가 시작됩니다.</p>
+      <div class="journey"><div class="journey-head"><span id="journey-label">육성 0 / 120개월</span><span id="journey-percent">0%</span></div><div class="track" role="progressbar" aria-label="전체 육성 진행률" aria-valuemin="0" aria-valuemax="120" aria-valuenow="0" id="journey-track"><i id="journey-fill"></i></div><div class="journey-head"><span id="ap-visual">AP 8 / 8</span><span id="slots-visual">행동 0 / 4</span></div></div><div class="hero-facts"><span id="ap">AP 8 / 8</span><span id="slots">활동 0 / 4</span><span id="season">겨울</span></div>
+    </div>
+    <div class="panel" id="end-panel" hidden></div>
+    <div class="panel"><div class="panel-title"><h2>이번 달의 선택</h2><span class="small" id="activity-meta">매달 8 AP · 4회 활동</span></div>
+      <div id="tabs" class="tabs"></div>
+      <div class="list-controls"><label><input type="checkbox" id="show-locked">잠긴 활동도 표시</label><label><input type="checkbox" id="all-projects">전체 직업 프로젝트</label></div>
+      <div id="actions" class="actions" aria-live="polite"></div>
+      <div class="next-row"><p class="hint">남은 AP를 사용하지 않고도 다음 달로 이동할 수 있습니다.</p><button id="next" class="primary">다음 달 →</button></div>
+    </div>
+    <div class="panel"><div class="panel-title"><h2>최근 선택</h2></div><div id="history" class="history"></div></div>
+  </section>
+  <aside class="right-col">
+    <div class="panel"><div class="panel-title"><h2>진로의 별자리</h2></div>
+      <label class="field-label" for="focus">목표 엔딩</label><select id="focus" class="full"></select>
+      <label class="field-label" for="hint-mode">진로 힌트</label><select id="hint-mode" class="full"><option value="off">끄기</option><option value="light">간단히</option><option value="detailed">자세히</option></select>
+      <div id="goal" class="goal"></div><div id="career-readiness" class="readiness" aria-live="polite"></div>
+      <div id="roadmap" class="roadmap"></div>
+      <div id="warnings" class="warnings"></div><div id="recommendation" class="recommendation"></div>
+    </div>
+    <div class="panel"><div class="panel-title"><h2>성장 기록</h2><span class="small">0–100</span></div><div id="stats"></div>
+      <div class="two-stats" id="resources"></div>
+      <div id="specialize"></div>
+    </div>
+    <div class="panel"><div class="panel-title"><h2>인연의 이야기 · 분기 서사</h2></div><p class="small">친구마다 두 갈래의 서사가 열립니다. 선택은 AP와 관계 수치에 반영됩니다.</p><div id="stories" class="stories"></div></div>
+    <div class="panel"><div class="panel-title"><h2>아스텔리아의 인연</h2></div><div id="npcs" class="npcs"></div></div>
+    <div class="panel"><div class="panel-title"><h2>연말 성장 리포트</h2></div><div id="reports"></div></div>
+  </aside>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal-shade" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden><div class="modal"><button class="modal-x" id="close-modal" aria-label="닫기">×</button><div id="modal-content"></div></div></div>
+<script src="/app.js" defer></script>
+</body></html>

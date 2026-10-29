@@ -1,0 +1,23 @@
+J04 2
+J05 2
+J09 2
+J10 2
+J14 2
+J15 2
+J19 2
+J20 2
+J24 2
+J25 2
+J29 2
+J30 2
+J34 2
+J35 2
+J39 2
+J40 2
+S01 2
+S03 2
+S04 2
+S05 2
+S07 2
+S08 2
+{"runs": 44, "successful_runs": 44, "successful_endings": ["J04", "J05", "J09", "J10", "J14", "J15", "J19", "J20", "J24", "J25", "J29", "J30", "J34", "J35", "J39", "J40", "S01", "S03", "S04", "S05", "S07", "S08"], "remaining_endings": [], "rejected_or_score_failed": 568, "transfer_violations": 0}

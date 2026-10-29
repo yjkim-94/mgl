@@ -1,0 +1,31 @@
+{
+  "runs": 44,
+  "successful_runs": 44,
+  "successful_endings": [
+    "J04",
+    "J05",
+    "J09",
+    "J10",
+    "J14",
+    "J15",
+    "J19",
+    "J20",
+    "J24",
+    "J25",
+    "J29",
+    "J30",
+    "J34",
+    "J35",
+    "J39",
+    "J40",
+    "S01",
+    "S03",
+    "S04",
+    "S05",
+    "S07",
+    "S08"
+  ],
+  "remaining_endings": [],
+  "rejected_or_score_failed": 568,
+  "transfer_violations": 0
+}

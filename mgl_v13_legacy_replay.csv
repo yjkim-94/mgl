@@ -1,0 +1,49 @@
+﻿id,name,selected,goal_met,audit,errors,transfer,story_chapters
+J01,간호사,J01,True,True,,1,0
+J02,물리치료사,J02,True,True,,1,0
+J03,임상병리사,J03,True,True,,1,0
+J04,약사,J04,True,True,,1,0
+J05,의사,J05,True,True,,1,0
+J06,학원 강사,J06,True,True,,1,0
+J07,학교 교사,J07,True,True,,1,0
+J08,과학 연구원,J08,True,True,,1,0
+J09,대학 교수,J09,True,True,,1,0
+J10,학술 저술가,J10,True,True,,1,0
+J11,사무직 회사원,J11,True,True,,1,0
+J12,인사·조직 관리자,J12,True,True,,1,0
+J13,금융 분석가,J13,True,True,,1,0
+J14,공인회계사,J14,True,True,,1,0
+J15,변호사,J15,True,True,,1,0
+J16,일러스트레이터,J16,True,True,,1,0
+J17,무용수,J17,True,True,,1,0
+J18,뮤지컬 배우,J18,True,True,,1,0
+J19,가수,J19,True,True,,1,0
+J20,유명 배우,J20,True,True,,1,0
+J21,네일 아티스트,J21,True,True,,1,0
+J22,헤어 디자이너,J22,True,True,,1,0
+J23,메이크업 아티스트,J23,True,True,,1,0
+J24,패션 디자이너,J24,True,True,,1,0
+J25,톱모델,J25,True,True,,1,0
+J26,피트니스 트레이너,J26,True,True,,1,0
+J27,스포츠 코치,J27,True,True,,1,0
+J28,요가·필라테스 지도자,J28,True,True,,1,0
+J29,프로 운동선수,J29,True,True,,1,0
+J30,세계적인 스포츠 스타,J30,True,True,,1,0
+J31,영상 편집자,J31,True,True,,1,0
+J32,소프트웨어 개발자,J32,True,True,,1,0
+J33,데이터 사이언티스트,J33,True,True,,1,0
+J34,방송 프로듀서,J34,True,True,,1,0
+J35,글로벌 IT 창업가,J35,True,True,,1,0
+J36,바리스타,J36,True,True,,1,0
+J37,호텔리어,J37,True,True,,1,0
+J38,셰프,J38,True,True,,1,0
+J39,레스토랑 경영자,J39,True,True,,1,0
+J40,대기업 CEO,J40,True,True,,1,0
+S01,헬창게이,S01,True,True,,1,0
+S02,클럽 죽돌이,S02,True,True,,1,0
+S03,전설의 모임장,S03,True,True,,1,0
+S04,연애 마스터,S04,True,True,,1,0
+S05,SNS 셀럽,S05,True,True,,1,0
+S06,자유로운 백수,S06,True,True,,1,0
+S07,이태원 밤의 황제,S07,True,True,,1,0
+S08,세계의 방랑자,S08,True,True,,1,0

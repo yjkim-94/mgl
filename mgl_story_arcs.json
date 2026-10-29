@@ -1,0 +1,2744 @@
+{
+  "schema_version": "1.3",
+  "count": 30,
+  "events": [
+    {
+      "id": "ST_RIAN_1_START",
+      "title": "배움의 의미 · 첫 번째 대화",
+      "description": "리안이 도서관의 오래된 천문 지도를 펼친다. \"별의 아이는 왜 떠나야 한다고 생각해?\"",
+      "age_min": 12,
+      "age_max": 14,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "rian",
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 69,
+      "options": [
+        {
+          "id": "together",
+          "text": "함께 자료를 모아 아직 모르는 질문을 연구한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "INT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_rian_a1"
+            ]
+          }
+        },
+        {
+          "id": "independent",
+          "text": "혼자 답을 찾아보고 자신의 가설을 나눈다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "independence": 2
+            },
+            "stat_growth": {
+              "INT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_rian_b1"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "rian",
+        "chapter": 1,
+        "route": "start",
+        "theme": "배움의 의미",
+        "opening": "리안이 도서관의 오래된 천문 지도를 펼친다. \"별의 아이는 왜 떠나야 한다고 생각해?\"",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_RIAN_2_A",
+      "title": "천문대의 공동 연구",
+      "description": "배움의 의미: 리안과 함께 가설을 검증할 실험을 꾸린다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "rian",
+      "requires": {
+        "flags": [
+          "story_rian_a1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "리안과 함께 가설을 검증할 실험을 꾸린다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "INT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_rian_a2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "INT": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_rian_a2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "rian",
+        "chapter": 2,
+        "route": "a",
+        "theme": "배움의 의미",
+        "opening": "배움의 의미: 리안과 함께 가설을 검증할 실험을 꾸린다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_RIAN_3_A",
+      "title": "마지막 공개 발표",
+      "description": "배움의 의미: 자료를 공유하고 연구 발표를 준비한다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "rian",
+      "requires": {
+        "flags": [
+          "story_rian_a2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "자료를 공유하고 연구 발표를 준비한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "INT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_rian_a_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "INT": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_rian_a_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "rian",
+        "chapter": 3,
+        "route": "a",
+        "theme": "배움의 의미",
+        "opening": "배움의 의미: 자료를 공유하고 연구 발표를 준비한다",
+        "outcome": {
+          "a": "리안은 공동 연구 노트에 두 사람의 이름을 적었다. \"우리의 질문은 여기 남을 거야.\"",
+          "b": "리안은 다른 결론도 존중하며 책갈피를 건넸다. \"답이 달라도 함께 질문했잖아.\""
+        }
+      }
+    },
+    {
+      "id": "ST_RIAN_2_B",
+      "title": "서로 다른 가설",
+      "description": "배움의 의미: 리안에게 다른 해석을 정중히 제시한다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "rian",
+      "requires": {
+        "flags": [
+          "story_rian_b1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "리안에게 다른 해석을 정중히 제시한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "independence": 2
+            },
+            "stat_growth": {
+              "INT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_rian_b2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "independence": 1
+            },
+            "stat_growth": {
+              "INT": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_rian_b2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "rian",
+        "chapter": 2,
+        "route": "b",
+        "theme": "배움의 의미",
+        "opening": "배움의 의미: 리안에게 다른 해석을 정중히 제시한다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_RIAN_3_B",
+      "title": "두 개의 해석",
+      "description": "배움의 의미: 서로 다른 해석을 정리해 작은 책으로 남긴다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "rian",
+      "requires": {
+        "flags": [
+          "story_rian_b2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "서로 다른 해석을 정리해 작은 책으로 남긴다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "independence": 2
+            },
+            "stat_growth": {
+              "INT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_rian_b_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "independence": 1
+            },
+            "stat_growth": {
+              "INT": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_rian_b_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "rian",
+        "chapter": 3,
+        "route": "b",
+        "theme": "배움의 의미",
+        "opening": "배움의 의미: 서로 다른 해석을 정리해 작은 책으로 남긴다",
+        "outcome": {
+          "a": "리안은 공동 연구 노트에 두 사람의 이름을 적었다. \"우리의 질문은 여기 남을 거야.\"",
+          "b": "리안은 다른 결론도 존중하며 책갈피를 건넸다. \"답이 달라도 함께 질문했잖아.\""
+        }
+      }
+    },
+    {
+      "id": "ST_EDWIN_1_START",
+      "title": "도움의 경계 · 첫 번째 대화",
+      "description": "에드윈이 신전의 봉사 명부를 보여 준다. \"돕는다는 게 늘 좋은 일일까?\"",
+      "age_min": 12,
+      "age_max": 14,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "edwin",
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 69,
+      "options": [
+        {
+          "id": "together",
+          "text": "상대의 의사를 먼저 묻는 봉사를 함께 기획한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_edwin_a1"
+            ]
+          }
+        },
+        {
+          "id": "independent",
+          "text": "혼자 할 수 있는 작은 도움부터 시작한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "independence": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_edwin_b1"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "edwin",
+        "chapter": 1,
+        "route": "start",
+        "theme": "도움의 경계",
+        "opening": "에드윈이 신전의 봉사 명부를 보여 준다. \"돕는다는 게 늘 좋은 일일까?\"",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_EDWIN_2_A",
+      "title": "경청하는 봉사단",
+      "description": "도움의 경계: 도움받는 이들의 의견을 직접 듣는다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "edwin",
+      "requires": {
+        "flags": [
+          "story_edwin_a1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "도움받는 이들의 의견을 직접 듣는다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_edwin_a2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "SEN": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_edwin_a2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "edwin",
+        "chapter": 2,
+        "route": "a",
+        "theme": "도움의 경계",
+        "opening": "도움의 경계: 도움받는 이들의 의견을 직접 듣는다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_EDWIN_3_A",
+      "title": "봉사 안내서",
+      "description": "도움의 경계: 자원봉사 안내서를 공동 작성한다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "edwin",
+      "requires": {
+        "flags": [
+          "story_edwin_a2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "자원봉사 안내서를 공동 작성한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_edwin_a_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "SEN": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_edwin_a_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "edwin",
+        "chapter": 3,
+        "route": "a",
+        "theme": "도움의 경계",
+        "opening": "도움의 경계: 자원봉사 안내서를 공동 작성한다",
+        "outcome": {
+          "a": "에드윈이 미소 지었다. \"누구를 돕든 그 사람의 목소리부터 들을게.\"",
+          "b": "에드윈이 고개를 끄덕였다. \"잘 도우려면 한 걸음 물러설 때도 있네.\""
+        }
+      }
+    },
+    {
+      "id": "ST_EDWIN_2_B",
+      "title": "도움의 거리",
+      "description": "도움의 경계: 받는 사람의 부담을 줄이는 방식으로 고친다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "edwin",
+      "requires": {
+        "flags": [
+          "story_edwin_b1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "받는 사람의 부담을 줄이는 방식으로 고친다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "independence": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_edwin_b2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "independence": 1
+            },
+            "stat_growth": {
+              "SEN": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_edwin_b2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "edwin",
+        "chapter": 2,
+        "route": "b",
+        "theme": "도움의 경계",
+        "opening": "도움의 경계: 받는 사람의 부담을 줄이는 방식으로 고친다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_EDWIN_3_B",
+      "title": "돌봄의 약속",
+      "description": "도움의 경계: 자기 결정권을 지키는 돌봄 수칙을 적는다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "edwin",
+      "requires": {
+        "flags": [
+          "story_edwin_b2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "자기 결정권을 지키는 돌봄 수칙을 적는다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "independence": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_edwin_b_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "independence": 1
+            },
+            "stat_growth": {
+              "SEN": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_edwin_b_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "edwin",
+        "chapter": 3,
+        "route": "b",
+        "theme": "도움의 경계",
+        "opening": "도움의 경계: 자기 결정권을 지키는 돌봄 수칙을 적는다",
+        "outcome": {
+          "a": "에드윈이 미소 지었다. \"누구를 돕든 그 사람의 목소리부터 들을게.\"",
+          "b": "에드윈이 고개를 끄덕였다. \"잘 도우려면 한 걸음 물러설 때도 있네.\""
+        }
+      }
+    },
+    {
+      "id": "ST_SION_1_START",
+      "title": "기술과 책임 · 첫 번째 대화",
+      "description": "시온이 마도 동력 장치를 보여 준다. \"이걸 모두에게 공개하면 어떨까?\"",
+      "age_min": 12,
+      "age_max": 14,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "sion",
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 69,
+      "options": [
+        {
+          "id": "together",
+          "text": "시온과 함께 안전 장치를 먼저 시험한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SKL": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_sion_a1"
+            ]
+          }
+        },
+        {
+          "id": "independent",
+          "text": "작동 원리부터 검토하고 위험을 문서화한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "SKL": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_sion_b1"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "sion",
+        "chapter": 1,
+        "route": "start",
+        "theme": "기술과 책임",
+        "opening": "시온이 마도 동력 장치를 보여 준다. \"이걸 모두에게 공개하면 어떨까?\"",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_SION_2_A",
+      "title": "안전한 공개 시연",
+      "description": "기술과 책임: 시민을 위한 공개 시연을 소규모로 연다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "sion",
+      "requires": {
+        "flags": [
+          "story_sion_a1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "시민을 위한 공개 시연을 소규모로 연다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SKL": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_sion_a2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "SKL": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_sion_a2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "sion",
+        "chapter": 2,
+        "route": "a",
+        "theme": "기술과 책임",
+        "opening": "기술과 책임: 시민을 위한 공개 시연을 소규모로 연다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_SION_3_A",
+      "title": "작은 기술 박람회",
+      "description": "기술과 책임: 실패 기록까지 공개하며 발표한다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "sion",
+      "requires": {
+        "flags": [
+          "story_sion_a2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "실패 기록까지 공개하며 발표한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SKL": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_sion_a_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "SKL": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_sion_a_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "sion",
+        "chapter": 3,
+        "route": "a",
+        "theme": "기술과 책임",
+        "opening": "기술과 책임: 실패 기록까지 공개하며 발표한다",
+        "outcome": {
+          "a": "시온이 작은 기계를 끄며 웃었다. \"우리 실수까지 기록하길 잘했어.\"",
+          "b": "시온이 설계도를 접었다. \"느리게 만들어도 오래 쓰면 그게 성공이지.\""
+        }
+      }
+    },
+    {
+      "id": "ST_SION_2_B",
+      "title": "책임 있는 설계",
+      "description": "기술과 책임: 위험을 줄일 대안을 함께 조사한다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "sion",
+      "requires": {
+        "flags": [
+          "story_sion_b1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "위험을 줄일 대안을 함께 조사한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "SKL": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_sion_b2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "discipline": 1
+            },
+            "stat_growth": {
+              "SKL": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_sion_b2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "sion",
+        "chapter": 2,
+        "route": "b",
+        "theme": "기술과 책임",
+        "opening": "기술과 책임: 위험을 줄일 대안을 함께 조사한다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_SION_3_B",
+      "title": "안전 점검 기록",
+      "description": "기술과 책임: 설계 문서에 안전 점검 기준을 남긴다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "sion",
+      "requires": {
+        "flags": [
+          "story_sion_b2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "설계 문서에 안전 점검 기준을 남긴다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "SKL": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_sion_b_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "discipline": 1
+            },
+            "stat_growth": {
+              "SKL": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_sion_b_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "sion",
+        "chapter": 3,
+        "route": "b",
+        "theme": "기술과 책임",
+        "opening": "기술과 책임: 설계 문서에 안전 점검 기준을 남긴다",
+        "outcome": {
+          "a": "시온이 작은 기계를 끄며 웃었다. \"우리 실수까지 기록하길 잘했어.\"",
+          "b": "시온이 설계도를 접었다. \"느리게 만들어도 오래 쓰면 그게 성공이지.\""
+        }
+      }
+    },
+    {
+      "id": "ST_EDEN_1_START",
+      "title": "표현과 진심 · 첫 번째 대화",
+      "description": "이든이 빈 무대에서 연습을 멈춘다. \"관객에게 솔직한 이야기를 보여 줄 수 있을까?\"",
+      "age_min": 12,
+      "age_max": 14,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "eden",
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 69,
+      "options": [
+        {
+          "id": "together",
+          "text": "이든과 함께 이야기의 주인공을 만든다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_eden_a1"
+            ]
+          }
+        },
+        {
+          "id": "independent",
+          "text": "자신의 경험을 글로 정리해 건넨다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_eden_b1"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "eden",
+        "chapter": 1,
+        "route": "start",
+        "theme": "표현과 진심",
+        "opening": "이든이 빈 무대에서 연습을 멈춘다. \"관객에게 솔직한 이야기를 보여 줄 수 있을까?\"",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_EDEN_2_A",
+      "title": "함께 고치는 연극",
+      "description": "표현과 진심: 연습실에서 서로의 의견을 듣고 수정한다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "eden",
+      "requires": {
+        "flags": [
+          "story_eden_a1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "연습실에서 서로의 의견을 듣고 수정한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_eden_a2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "SEN": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_eden_a2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "eden",
+        "chapter": 2,
+        "route": "a",
+        "theme": "표현과 진심",
+        "opening": "표현과 진심: 연습실에서 서로의 의견을 듣고 수정한다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_EDEN_3_A",
+      "title": "커튼콜의 약속",
+      "description": "표현과 진심: 작은 공연에서 함께 무대 인사를 한다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "eden",
+      "requires": {
+        "flags": [
+          "story_eden_a2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "작은 공연에서 함께 무대 인사를 한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_eden_a_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "SEN": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_eden_a_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "eden",
+        "chapter": 3,
+        "route": "a",
+        "theme": "표현과 진심",
+        "opening": "표현과 진심: 작은 공연에서 함께 무대 인사를 한다",
+        "outcome": {
+          "a": "이든이 커튼 뒤에서 손을 흔들었다. \"우리의 무대는 끝나도 이야기는 남아.\"",
+          "b": "이든이 대본 첫 장에 감사 인사를 적었다. \"이건 네 목소리이기도 해.\""
+        }
+      }
+    },
+    {
+      "id": "ST_EDEN_2_B",
+      "title": "무대 밖의 목소리",
+      "description": "표현과 진심: 공연의 빈 장면을 짧은 글로 채운다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "eden",
+      "requires": {
+        "flags": [
+          "story_eden_b1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "공연의 빈 장면을 짧은 글로 채운다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_eden_b2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "SEN": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_eden_b2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "eden",
+        "chapter": 2,
+        "route": "b",
+        "theme": "표현과 진심",
+        "opening": "표현과 진심: 공연의 빈 장면을 짧은 글로 채운다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_EDEN_3_B",
+      "title": "대본 속 편지",
+      "description": "표현과 진심: 완성된 대본을 기념으로 나누어 갖는다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "eden",
+      "requires": {
+        "flags": [
+          "story_eden_b2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "완성된 대본을 기념으로 나누어 갖는다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "SEN": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_eden_b_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "SEN": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_eden_b_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "eden",
+        "chapter": 3,
+        "route": "b",
+        "theme": "표현과 진심",
+        "opening": "표현과 진심: 완성된 대본을 기념으로 나누어 갖는다",
+        "outcome": {
+          "a": "이든이 커튼 뒤에서 손을 흔들었다. \"우리의 무대는 끝나도 이야기는 남아.\"",
+          "b": "이든이 대본 첫 장에 감사 인사를 적었다. \"이건 네 목소리이기도 해.\""
+        }
+      }
+    },
+    {
+      "id": "ST_KAIL_1_START",
+      "title": "경쟁과 연대 · 첫 번째 대화",
+      "description": "카일이 훈련장에서 묻는다. \"이긴다는 건 누군가를 앞서는 것뿐일까?\"",
+      "age_min": 12,
+      "age_max": 14,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "kail",
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 69,
+      "options": [
+        {
+          "id": "together",
+          "text": "기록보다 서로의 안전을 우선해 훈련한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "VIT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_kail_a1"
+            ]
+          }
+        },
+        {
+          "id": "independent",
+          "text": "자신의 한계를 기록하며 꾸준히 연습한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "VIT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_kail_b1"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "kail",
+        "chapter": 1,
+        "route": "start",
+        "theme": "경쟁과 연대",
+        "opening": "카일이 훈련장에서 묻는다. \"이긴다는 건 누군가를 앞서는 것뿐일까?\"",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_KAIL_2_A",
+      "title": "함께 뛰는 훈련",
+      "description": "경쟁과 연대: 약한 팀원을 도울 훈련 계획을 세운다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "kail",
+      "requires": {
+        "flags": [
+          "story_kail_a1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "약한 팀원을 도울 훈련 계획을 세운다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "VIT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_kail_a2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "VIT": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_kail_a2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "kail",
+        "chapter": 2,
+        "route": "a",
+        "theme": "경쟁과 연대",
+        "opening": "경쟁과 연대: 약한 팀원을 도울 훈련 계획을 세운다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_KAIL_3_A",
+      "title": "모두의 친선 경기",
+      "description": "경쟁과 연대: 다 함께 마치는 친선 경기를 준비한다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "kail",
+      "requires": {
+        "flags": [
+          "story_kail_a2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "다 함께 마치는 친선 경기를 준비한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "empathy": 2
+            },
+            "stat_growth": {
+              "VIT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_kail_a_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "empathy": 1
+            },
+            "stat_growth": {
+              "VIT": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_kail_a_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "kail",
+        "chapter": 3,
+        "route": "a",
+        "theme": "경쟁과 연대",
+        "opening": "경쟁과 연대: 다 함께 마치는 친선 경기를 준비한다",
+        "outcome": {
+          "a": "카일이 물병을 건넸다. \"같이 끝까지 뛰는 게 가장 좋은 승리야.\"",
+          "b": "카일이 낡은 훈련 일지를 접었다. \"예전의 나와 비교하면 충분해.\""
+        }
+      }
+    },
+    {
+      "id": "ST_KAIL_2_B",
+      "title": "성장의 기록",
+      "description": "경쟁과 연대: 훈련 일지의 실수까지 솔직하게 공유한다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "kail",
+      "requires": {
+        "flags": [
+          "story_kail_b1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "훈련 일지의 실수까지 솔직하게 공유한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "VIT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_kail_b2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "discipline": 1
+            },
+            "stat_growth": {
+              "VIT": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_kail_b2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "kail",
+        "chapter": 2,
+        "route": "b",
+        "theme": "경쟁과 연대",
+        "opening": "경쟁과 연대: 훈련 일지의 실수까지 솔직하게 공유한다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_KAIL_3_B",
+      "title": "나만의 기록표",
+      "description": "경쟁과 연대: 자기 페이스를 존중하는 운동 규칙을 남긴다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "kail",
+      "requires": {
+        "flags": [
+          "story_kail_b2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "자기 페이스를 존중하는 운동 규칙을 남긴다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "VIT": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_kail_b_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "discipline": 1
+            },
+            "stat_growth": {
+              "VIT": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_kail_b_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "kail",
+        "chapter": 3,
+        "route": "b",
+        "theme": "경쟁과 연대",
+        "opening": "경쟁과 연대: 자기 페이스를 존중하는 운동 규칙을 남긴다",
+        "outcome": {
+          "a": "카일이 물병을 건넸다. \"같이 끝까지 뛰는 게 가장 좋은 승리야.\"",
+          "b": "카일이 낡은 훈련 일지를 접었다. \"예전의 나와 비교하면 충분해.\""
+        }
+      }
+    },
+    {
+      "id": "ST_NOAH_1_START",
+      "title": "모두를 위한 공동체 · 첫 번째 대화",
+      "description": "노아가 축제 예산표를 보여 준다. \"처음 온 사람도 편안한 모임을 만들 수 있을까?\"",
+      "age_min": 12,
+      "age_max": 14,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "noah",
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 69,
+      "options": [
+        {
+          "id": "together",
+          "text": "노아와 함께 조용한 친구들의 의견을 듣는다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "leadership": 2
+            },
+            "stat_growth": {
+              "SOC": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_noah_a1"
+            ]
+          }
+        },
+        {
+          "id": "independent",
+          "text": "소규모 행사부터 시범 운영을 제안한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "SOC": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_noah_b1"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "noah",
+        "chapter": 1,
+        "route": "start",
+        "theme": "모두를 위한 공동체",
+        "opening": "노아가 축제 예산표를 보여 준다. \"처음 온 사람도 편안한 모임을 만들 수 있을까?\"",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_NOAH_2_A",
+      "title": "다 함께 만드는 축제",
+      "description": "모두를 위한 공동체: 축제 운영진의 역할을 공평하게 나눈다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "noah",
+      "requires": {
+        "flags": [
+          "story_noah_a1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "축제 운영진의 역할을 공평하게 나눈다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "leadership": 2
+            },
+            "stat_growth": {
+              "SOC": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_noah_a2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "leadership": 1
+            },
+            "stat_growth": {
+              "SOC": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_noah_a2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "noah",
+        "chapter": 2,
+        "route": "a",
+        "theme": "모두를 위한 공동체",
+        "opening": "모두를 위한 공동체: 축제 운영진의 역할을 공평하게 나눈다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_NOAH_3_A",
+      "title": "공동체 감사의 날",
+      "description": "모두를 위한 공동체: 공동체 감사 모임을 준비한다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "noah",
+      "requires": {
+        "flags": [
+          "story_noah_a2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "공동체 감사 모임을 준비한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "leadership": 2
+            },
+            "stat_growth": {
+              "SOC": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_noah_a_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "leadership": 1
+            },
+            "stat_growth": {
+              "SOC": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_noah_a_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "noah",
+        "chapter": 3,
+        "route": "a",
+        "theme": "모두를 위한 공동체",
+        "opening": "모두를 위한 공동체: 공동체 감사 모임을 준비한다",
+        "outcome": {
+          "a": "노아가 모두가 적은 편지를 펼쳤다. \"이 자리는 우리가 함께 만들었어.\"",
+          "b": "노아가 정리된 자료를 넘겼다. \"다음 사람도 시작할 수 있겠네.\""
+        }
+      }
+    },
+    {
+      "id": "ST_NOAH_2_B",
+      "title": "작지만 오래가는 모임",
+      "description": "모두를 위한 공동체: 참여율과 비용을 꼼꼼하게 점검한다",
+      "age_min": 15,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "noah",
+      "requires": {
+        "flags": [
+          "story_noah_b1"
+        ],
+        "npc_affinity": 28,
+        "npc_trust": 28
+      },
+      "frequency": "lifetime",
+      "priority": 70,
+      "options": [
+        {
+          "id": "commit",
+          "text": "참여율과 비용을 꼼꼼하게 점검한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "SOC": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_noah_b2"
+            ]
+          }
+        },
+        {
+          "id": "careful",
+          "text": "시간을 나누어 조심스럽게 도와준다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "discipline": 1
+            },
+            "stat_growth": {
+              "SOC": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_noah_b2"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "noah",
+        "chapter": 2,
+        "route": "b",
+        "theme": "모두를 위한 공동체",
+        "opening": "모두를 위한 공동체: 참여율과 비용을 꼼꼼하게 점검한다",
+        "outcome": null
+      }
+    },
+    {
+      "id": "ST_NOAH_3_B",
+      "title": "다음 운영자에게",
+      "description": "모두를 위한 공동체: 다음 운영자를 위한 인수인계서를 남긴다",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "noah",
+      "requires": {
+        "flags": [
+          "story_noah_b2"
+        ],
+        "npc_affinity": 36,
+        "npc_trust": 33
+      },
+      "frequency": "lifetime",
+      "priority": 71,
+      "options": [
+        {
+          "id": "fulfill",
+          "text": "다음 운영자를 위한 인수인계서를 남긴다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 5,
+              "trust": 4,
+              "intimacy": 2
+            },
+            "values": {
+              "discipline": 2
+            },
+            "stat_growth": {
+              "SOC": 1
+            },
+            "autonomy": 1,
+            "relation": 2,
+            "stress": 2,
+            "flags": [
+              "story_noah_b_finished"
+            ]
+          }
+        },
+        {
+          "id": "appreciate",
+          "text": "그동안 함께한 시간을 감사히 기록한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 1,
+              "trust": 2,
+              "intimacy": 0
+            },
+            "values": {
+              "discipline": 1
+            },
+            "stat_growth": {
+              "SOC": 0.4
+            },
+            "autonomy": 2,
+            "relation": 0,
+            "stress": -1,
+            "flags": [
+              "story_noah_b_finished"
+            ]
+          }
+        }
+      ],
+      "story": {
+        "npc": "noah",
+        "chapter": 3,
+        "route": "b",
+        "theme": "모두를 위한 공동체",
+        "opening": "모두를 위한 공동체: 다음 운영자를 위한 인수인계서를 남긴다",
+        "outcome": {
+          "a": "노아가 모두가 적은 편지를 펼쳤다. \"이 자리는 우리가 함께 만들었어.\"",
+          "b": "노아가 정리된 자료를 넘겼다. \"다음 사람도 시작할 수 있겠네.\""
+        }
+      }
+    }
+  ],
+  "narrative_theme": {
+    "rian": "배움의 의미",
+    "edwin": "도움의 경계",
+    "sion": "기술과 책임",
+    "eden": "표현과 진심",
+    "kail": "경쟁과 연대",
+    "noah": "모두를 위한 공동체"
+  }
+}

@@ -1,0 +1,8746 @@
+{
+  "schema_version": "1.0",
+  "source": "v0.9 original job thresholds adapted; all project/event definitions are provisional v1.0 design proposals",
+  "facility_names": {
+    "academy": "왕립 학술원",
+    "healing": "치유의 신전",
+    "workshop": "마도 공방",
+    "theater": "예술 극장",
+    "beauty": "미용 연금술원",
+    "knights": "기사단 훈련소",
+    "guild": "상인 길드",
+    "tower": "마법 통신탑"
+  },
+  "facility_stat_growth": {
+    "academy": [
+      [
+        "INT",
+        "WIL"
+      ],
+      [
+        "INT",
+        "SKL"
+      ],
+      [
+        "INT",
+        "WIL"
+      ]
+    ],
+    "healing": [
+      [
+        "INT",
+        "SEN"
+      ],
+      [
+        "MAG",
+        "INT"
+      ],
+      [
+        "INT",
+        "SKL"
+      ]
+    ],
+    "workshop": [
+      [
+        "SKL",
+        "INT"
+      ],
+      [
+        "SKL",
+        "MAG"
+      ],
+      [
+        "SKL",
+        "INT"
+      ]
+    ],
+    "theater": [
+      [
+        "SEN",
+        "CHA"
+      ],
+      [
+        "SEN",
+        "CHA"
+      ],
+      [
+        "CHA",
+        "SEN"
+      ]
+    ],
+    "beauty": [
+      [
+        "CHA",
+        "SEN"
+      ],
+      [
+        "SKL",
+        "CHA"
+      ],
+      [
+        "SEN",
+        "SKL"
+      ]
+    ],
+    "knights": [
+      [
+        "VIT",
+        "WIL"
+      ],
+      [
+        "VIT",
+        "SOC"
+      ],
+      [
+        "VIT",
+        "SKL"
+      ]
+    ],
+    "guild": [
+      [
+        "SOC",
+        "INT"
+      ],
+      [
+        "SKL",
+        "SOC"
+      ],
+      [
+        "SOC",
+        "WIL"
+      ]
+    ],
+    "tower": [
+      [
+        "INT",
+        "SEN"
+      ],
+      [
+        "SKL",
+        "SEN"
+      ],
+      [
+        "SKL",
+        "SOC"
+      ]
+    ]
+  },
+  "project_grades": {
+    "P1": {
+      "ap": 2,
+      "cost": 40,
+      "age": 13,
+      "success_threshold": 50
+    },
+    "P2": {
+      "ap": 3,
+      "cost": 120,
+      "age": 16,
+      "success_threshold": 65
+    },
+    "P3": {
+      "ap": 4,
+      "cost": 200,
+      "age": 18,
+      "success_threshold": 75
+    },
+    "M": {
+      "ap": 4,
+      "cost": 250,
+      "age": 18,
+      "success_threshold": 85
+    }
+  },
+  "projects": [
+    {
+      "id": "J01_P1",
+      "name": "간호사 기초 실습",
+      "grade": "P1",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J01"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 40,
+        "SEN": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J01_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J01_P2",
+      "name": "간호사 전문 프로젝트",
+      "grade": "P2",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J01"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J01_P1"
+        ],
+        "events": [
+          "E_J01_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J02_P1",
+      "name": "물리치료사 기초 실습",
+      "grade": "P1",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J02"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 40,
+        "VIT": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J02_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J02_P2",
+      "name": "물리치료사 전문 프로젝트",
+      "grade": "P2",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J02"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "knights",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "VIT": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J02_P1"
+        ],
+        "events": [
+          "E_J02_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J03_P1",
+      "name": "임상병리사 기초 실습",
+      "grade": "P1",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J03"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 40,
+        "SKL": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J03_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J03_P2",
+      "name": "임상병리사 전문 프로젝트",
+      "grade": "P2",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J03"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J03_P1"
+        ],
+        "events": [
+          "E_J03_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J04_P1",
+      "name": "약사 기초 실습",
+      "grade": "P1",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J04"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 40
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J04_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J04_P2",
+      "name": "약사 전문 프로젝트",
+      "grade": "P2",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J04"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "workshop",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "SKL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J04_P1"
+        ],
+        "events": [
+          "E_J04_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J04_P3A",
+      "name": "약사 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J04"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "workshop",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 72,
+        "SKL": 62
+      },
+      "prerequisites": {
+        "projects": [
+          "J04_P2"
+        ],
+        "events": [
+          "E_J04_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J05_P1",
+      "name": "의사 기초 실습",
+      "grade": "P1",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J05"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "WIL": 45
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J05_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J05_P2",
+      "name": "의사 전문 프로젝트",
+      "grade": "P2",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J05"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 70,
+        "WIL": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J05_P1"
+        ],
+        "events": [
+          "E_J05_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J05_P3A",
+      "name": "의사 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J05"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 82,
+        "WIL": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J05_P2"
+        ],
+        "events": [
+          "E_J05_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J05_P3B",
+      "name": "의사 대표 프로젝트 II",
+      "grade": "P3",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J05"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 84,
+        "WIL": 69
+      },
+      "prerequisites": {
+        "projects": [
+          "J05_P3A"
+        ],
+        "events": [
+          "E_J05_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J05_M",
+      "name": "의사 마스터 업적",
+      "grade": "M",
+      "facility": "healing",
+      "linked_job_ids": [
+        "J05"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 87,
+        "WIL": 72
+      },
+      "prerequisites": {
+        "projects": [
+          "J05_P3B"
+        ],
+        "events": [
+          "E_J05_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 250,
+      "success_threshold": 85,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 10,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J06_P1",
+      "name": "학원 강사 기초 실습",
+      "grade": "P1",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J06"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J06_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J07_P1",
+      "name": "학교 교사 기초 실습",
+      "grade": "P1",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J07"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 40,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J07_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J07_P2",
+      "name": "학교 교사 전문 프로젝트",
+      "grade": "P2",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J07"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SOC": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J07_P1"
+        ],
+        "events": [
+          "E_J07_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J08_P1",
+      "name": "과학 연구원 기초 실습",
+      "grade": "P1",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J08"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 40,
+        "SKL": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J08_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J08_P2",
+      "name": "과학 연구원 전문 프로젝트",
+      "grade": "P2",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J08"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J08_P1"
+        ],
+        "events": [
+          "E_J08_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J09_P1",
+      "name": "대학 교수 기초 실습",
+      "grade": "P1",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J09"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "WIL": 45
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J09_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J09_P2",
+      "name": "대학 교수 전문 프로젝트",
+      "grade": "P2",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J09"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 70,
+        "WIL": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J09_P1"
+        ],
+        "events": [
+          "E_J09_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J09_P3A",
+      "name": "대학 교수 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J09"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 82,
+        "WIL": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J09_P2"
+        ],
+        "events": [
+          "E_J09_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J09_P3B",
+      "name": "대학 교수 대표 프로젝트 II",
+      "grade": "P3",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J09"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 84,
+        "WIL": 69
+      },
+      "prerequisites": {
+        "projects": [
+          "J09_P3A"
+        ],
+        "events": [
+          "E_J09_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J09_M",
+      "name": "대학 교수 마스터 업적",
+      "grade": "M",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J09"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 87,
+        "WIL": 72
+      },
+      "prerequisites": {
+        "projects": [
+          "J09_P3B"
+        ],
+        "events": [
+          "E_J09_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 250,
+      "success_threshold": 85,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 10,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J10_P1",
+      "name": "학술 저술가 기초 실습",
+      "grade": "P1",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J10"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SEN": 40
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J10_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J10_P2",
+      "name": "학술 저술가 전문 프로젝트",
+      "grade": "P2",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J10"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "tower",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "SEN": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J10_P1"
+        ],
+        "events": [
+          "E_J10_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J10_P3A",
+      "name": "학술 저술가 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J10"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "tower",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 72,
+        "SEN": 62
+      },
+      "prerequisites": {
+        "projects": [
+          "J10_P2"
+        ],
+        "events": [
+          "E_J10_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J11_P1",
+      "name": "사무직 회사원 기초 실습",
+      "grade": "P1",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J11"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J11_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J12_P1",
+      "name": "인사·조직 관리자 기초 실습",
+      "grade": "P1",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J12"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SOC": 40,
+        "INT": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J12_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J12_P2",
+      "name": "인사·조직 관리자 전문 프로젝트",
+      "grade": "P2",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J12"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 50,
+        "INT": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J12_P1"
+        ],
+        "events": [
+          "E_J12_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J13_P1",
+      "name": "금융 분석가 기초 실습",
+      "grade": "P1",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J13"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 40,
+        "SKL": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J13_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J13_P2",
+      "name": "금융 분석가 전문 프로젝트",
+      "grade": "P2",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J13"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J13_P1"
+        ],
+        "events": [
+          "E_J13_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J14_P1",
+      "name": "공인회계사 기초 실습",
+      "grade": "P1",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J14"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 40
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J14_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J14_P2",
+      "name": "공인회계사 전문 프로젝트",
+      "grade": "P2",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J14"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "SKL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J14_P1"
+        ],
+        "events": [
+          "E_J14_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J14_P3A",
+      "name": "공인회계사 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J14"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 72,
+        "SKL": 62
+      },
+      "prerequisites": {
+        "projects": [
+          "J14_P2"
+        ],
+        "events": [
+          "E_J14_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J15_P1",
+      "name": "변호사 기초 실습",
+      "grade": "P1",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J15"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "SOC": 45
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J15_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J15_P2",
+      "name": "변호사 전문 프로젝트",
+      "grade": "P2",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J15"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 70,
+        "SOC": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J15_P1"
+        ],
+        "events": [
+          "E_J15_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J15_P3A",
+      "name": "변호사 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J15"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 82,
+        "SOC": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J15_P2"
+        ],
+        "events": [
+          "E_J15_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J15_P3B",
+      "name": "변호사 대표 프로젝트 II",
+      "grade": "P3",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J15"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 84,
+        "SOC": 69
+      },
+      "prerequisites": {
+        "projects": [
+          "J15_P3A"
+        ],
+        "events": [
+          "E_J15_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J15_M",
+      "name": "변호사 마스터 업적",
+      "grade": "M",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J15"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 87,
+        "SOC": 72
+      },
+      "prerequisites": {
+        "projects": [
+          "J15_P3B"
+        ],
+        "events": [
+          "E_J15_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 250,
+      "success_threshold": 85,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 10,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J16_P1",
+      "name": "일러스트레이터 기초 실습",
+      "grade": "P1",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J16"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SEN": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J16_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J17_P1",
+      "name": "무용수 기초 실습",
+      "grade": "P1",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J17"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "VIT": 40,
+        "SEN": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J17_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J17_P2",
+      "name": "무용수 전문 프로젝트",
+      "grade": "P2",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J17"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "knights",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "VIT": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J17_P1"
+        ],
+        "events": [
+          "E_J17_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J18_P1",
+      "name": "뮤지컬 배우 기초 실습",
+      "grade": "P1",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J18"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "CHA": 40,
+        "SEN": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J18_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J18_P2",
+      "name": "뮤지컬 배우 전문 프로젝트",
+      "grade": "P2",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J18"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J18_P1"
+        ],
+        "events": [
+          "E_J18_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J19_P1",
+      "name": "가수 기초 실습",
+      "grade": "P1",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J19"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SEN": 50,
+        "CHA": 40
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J19_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J19_P2",
+      "name": "가수 전문 프로젝트",
+      "grade": "P2",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J19"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SEN": 60,
+        "CHA": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J19_P1"
+        ],
+        "events": [
+          "E_J19_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J19_P3A",
+      "name": "가수 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J19"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SEN": 72,
+        "CHA": 62
+      },
+      "prerequisites": {
+        "projects": [
+          "J19_P2"
+        ],
+        "events": [
+          "E_J19_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J20_P1",
+      "name": "유명 배우 기초 실습",
+      "grade": "P1",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J20"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "CHA": 60,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J20_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J20_P2",
+      "name": "유명 배우 전문 프로젝트",
+      "grade": "P2",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J20"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 70,
+        "SEN": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J20_P1"
+        ],
+        "events": [
+          "E_J20_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J20_P3A",
+      "name": "유명 배우 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J20"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 82,
+        "SEN": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J20_P2"
+        ],
+        "events": [
+          "E_J20_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J20_P3B",
+      "name": "유명 배우 대표 프로젝트 II",
+      "grade": "P3",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J20"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 84,
+        "SEN": 69
+      },
+      "prerequisites": {
+        "projects": [
+          "J20_P3A"
+        ],
+        "events": [
+          "E_J20_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J20_M",
+      "name": "유명 배우 마스터 업적",
+      "grade": "M",
+      "facility": "theater",
+      "linked_job_ids": [
+        "J20"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 87,
+        "SEN": 72
+      },
+      "prerequisites": {
+        "projects": [
+          "J20_P3B"
+        ],
+        "events": [
+          "E_J20_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 250,
+      "success_threshold": 85,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 10,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J21_P1",
+      "name": "네일 아티스트 기초 실습",
+      "grade": "P1",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J21"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J21_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J22_P1",
+      "name": "헤어 디자이너 기초 실습",
+      "grade": "P1",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J22"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 40,
+        "CHA": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J22_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J22_P2",
+      "name": "헤어 디자이너 전문 프로젝트",
+      "grade": "P2",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J22"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "CHA": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J22_P1"
+        ],
+        "events": [
+          "E_J22_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J23_P1",
+      "name": "메이크업 아티스트 기초 실습",
+      "grade": "P1",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J23"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 40,
+        "SEN": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J23_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J23_P2",
+      "name": "메이크업 아티스트 전문 프로젝트",
+      "grade": "P2",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J23"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J23_P1"
+        ],
+        "events": [
+          "E_J23_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J24_P1",
+      "name": "패션 디자이너 기초 실습",
+      "grade": "P1",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J24"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SEN": 50,
+        "SKL": 40
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J24_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J24_P2",
+      "name": "패션 디자이너 전문 프로젝트",
+      "grade": "P2",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J24"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SEN": 60,
+        "SKL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J24_P1"
+        ],
+        "events": [
+          "E_J24_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J24_P3A",
+      "name": "패션 디자이너 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J24"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SEN": 72,
+        "SKL": 62
+      },
+      "prerequisites": {
+        "projects": [
+          "J24_P2"
+        ],
+        "events": [
+          "E_J24_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J25_P1",
+      "name": "톱모델 기초 실습",
+      "grade": "P1",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J25"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "CHA": 60,
+        "WIL": 45
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J25_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J25_P2",
+      "name": "톱모델 전문 프로젝트",
+      "grade": "P2",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J25"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 70,
+        "WIL": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J25_P1"
+        ],
+        "events": [
+          "E_J25_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J25_P3A",
+      "name": "톱모델 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J25"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 82,
+        "WIL": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J25_P2"
+        ],
+        "events": [
+          "E_J25_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J25_P3B",
+      "name": "톱모델 대표 프로젝트 II",
+      "grade": "P3",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J25"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 84,
+        "WIL": 69
+      },
+      "prerequisites": {
+        "projects": [
+          "J25_P3A"
+        ],
+        "events": [
+          "E_J25_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J25_M",
+      "name": "톱모델 마스터 업적",
+      "grade": "M",
+      "facility": "beauty",
+      "linked_job_ids": [
+        "J25"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 87,
+        "WIL": 72
+      },
+      "prerequisites": {
+        "projects": [
+          "J25_P3B"
+        ],
+        "events": [
+          "E_J25_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 250,
+      "success_threshold": 85,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 10,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J26_P1",
+      "name": "피트니스 트레이너 기초 실습",
+      "grade": "P1",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J26"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "VIT": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J26_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J27_P1",
+      "name": "스포츠 코치 기초 실습",
+      "grade": "P1",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J27"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "VIT": 40,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J27_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J27_P2",
+      "name": "스포츠 코치 전문 프로젝트",
+      "grade": "P2",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J27"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 50,
+        "SOC": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J27_P1"
+        ],
+        "events": [
+          "E_J27_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J28_P1",
+      "name": "요가·필라테스 지도자 기초 실습",
+      "grade": "P1",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J28"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "VIT": 40,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J28_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J28_P2",
+      "name": "요가·필라테스 지도자 전문 프로젝트",
+      "grade": "P2",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J28"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 50,
+        "SEN": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J28_P1"
+        ],
+        "events": [
+          "E_J28_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J29_P1",
+      "name": "프로 운동선수 기초 실습",
+      "grade": "P1",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J29"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "VIT": 50,
+        "WIL": 40
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J29_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J29_P2",
+      "name": "프로 운동선수 전문 프로젝트",
+      "grade": "P2",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J29"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 60,
+        "WIL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J29_P1"
+        ],
+        "events": [
+          "E_J29_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J29_P3A",
+      "name": "프로 운동선수 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J29"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 72,
+        "WIL": 62
+      },
+      "prerequisites": {
+        "projects": [
+          "J29_P2"
+        ],
+        "events": [
+          "E_J29_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J30_P1",
+      "name": "세계적인 스포츠 스타 기초 실습",
+      "grade": "P1",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J30"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "VIT": 60,
+        "WIL": 45
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J30_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J30_P2",
+      "name": "세계적인 스포츠 스타 전문 프로젝트",
+      "grade": "P2",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J30"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 70,
+        "WIL": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J30_P1"
+        ],
+        "events": [
+          "E_J30_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J30_P3A",
+      "name": "세계적인 스포츠 스타 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J30"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 82,
+        "WIL": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J30_P2"
+        ],
+        "events": [
+          "E_J30_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J30_P3B",
+      "name": "세계적인 스포츠 스타 대표 프로젝트 II",
+      "grade": "P3",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J30"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 84,
+        "WIL": 69
+      },
+      "prerequisites": {
+        "projects": [
+          "J30_P3A"
+        ],
+        "events": [
+          "E_J30_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J30_M",
+      "name": "세계적인 스포츠 스타 마스터 업적",
+      "grade": "M",
+      "facility": "knights",
+      "linked_job_ids": [
+        "J30"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 87,
+        "WIL": 72
+      },
+      "prerequisites": {
+        "projects": [
+          "J30_P3B"
+        ],
+        "events": [
+          "E_J30_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 250,
+      "success_threshold": 85,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 10,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J31_P1",
+      "name": "영상 편집자 기초 실습",
+      "grade": "P1",
+      "facility": "tower",
+      "linked_job_ids": [
+        "J31"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "tower",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J31_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J32_P1",
+      "name": "소프트웨어 개발자 기초 실습",
+      "grade": "P1",
+      "facility": "workshop",
+      "linked_job_ids": [
+        "J32"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 40,
+        "INT": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J32_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J32_P2",
+      "name": "소프트웨어 개발자 전문 프로젝트",
+      "grade": "P2",
+      "facility": "workshop",
+      "linked_job_ids": [
+        "J32"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "tower",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "INT": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J32_P1"
+        ],
+        "events": [
+          "E_J32_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J33_P1",
+      "name": "데이터 사이언티스트 기초 실습",
+      "grade": "P1",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J33"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "INT": 40,
+        "SKL": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J33_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J33_P2",
+      "name": "데이터 사이언티스트 전문 프로젝트",
+      "grade": "P2",
+      "facility": "academy",
+      "linked_job_ids": [
+        "J33"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "tower",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J33_P1"
+        ],
+        "events": [
+          "E_J33_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J34_P1",
+      "name": "방송 프로듀서 기초 실습",
+      "grade": "P1",
+      "facility": "tower",
+      "linked_job_ids": [
+        "J34"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "tower",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "SEN": 40
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J34_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J34_P2",
+      "name": "방송 프로듀서 전문 프로젝트",
+      "grade": "P2",
+      "facility": "tower",
+      "linked_job_ids": [
+        "J34"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "tower",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 60,
+        "SEN": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J34_P1"
+        ],
+        "events": [
+          "E_J34_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J34_P3A",
+      "name": "방송 프로듀서 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "tower",
+      "linked_job_ids": [
+        "J34"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "tower",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 72,
+        "SEN": 62
+      },
+      "prerequisites": {
+        "projects": [
+          "J34_P2"
+        ],
+        "events": [
+          "E_J34_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J35_P1",
+      "name": "글로벌 IT 창업가 기초 실습",
+      "grade": "P1",
+      "facility": "workshop",
+      "linked_job_ids": [
+        "J35"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 60,
+        "INT": 45
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J35_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J35_P2",
+      "name": "글로벌 IT 창업가 전문 프로젝트",
+      "grade": "P2",
+      "facility": "workshop",
+      "linked_job_ids": [
+        "J35"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 70,
+        "INT": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J35_P1"
+        ],
+        "events": [
+          "E_J35_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J35_P3A",
+      "name": "글로벌 IT 창업가 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "workshop",
+      "linked_job_ids": [
+        "J35"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 82,
+        "INT": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J35_P2"
+        ],
+        "events": [
+          "E_J35_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J35_P3B",
+      "name": "글로벌 IT 창업가 대표 프로젝트 II",
+      "grade": "P3",
+      "facility": "workshop",
+      "linked_job_ids": [
+        "J35"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 84,
+        "INT": 69
+      },
+      "prerequisites": {
+        "projects": [
+          "J35_P3A"
+        ],
+        "events": [
+          "E_J35_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J35_M",
+      "name": "글로벌 IT 창업가 마스터 업적",
+      "grade": "M",
+      "facility": "workshop",
+      "linked_job_ids": [
+        "J35"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 87,
+        "INT": 72
+      },
+      "prerequisites": {
+        "projects": [
+          "J35_P3B"
+        ],
+        "events": [
+          "E_J35_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 250,
+      "success_threshold": 85,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 10,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J36_P1",
+      "name": "바리스타 기초 실습",
+      "grade": "P1",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J36"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J36_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J37_P1",
+      "name": "호텔리어 기초 실습",
+      "grade": "P1",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J37"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SOC": 40,
+        "CHA": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J37_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J37_P2",
+      "name": "호텔리어 전문 프로젝트",
+      "grade": "P2",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J37"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 50,
+        "CHA": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J37_P1"
+        ],
+        "events": [
+          "E_J37_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J38_P1",
+      "name": "셰프 기초 실습",
+      "grade": "P1",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J38"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SKL": 40,
+        "SEN": 35
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J38_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J38_P2",
+      "name": "셰프 전문 프로젝트",
+      "grade": "P2",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J38"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J38_P1"
+        ],
+        "events": [
+          "E_J38_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J39_P1",
+      "name": "레스토랑 경영자 기초 실습",
+      "grade": "P1",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J39"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SOC": 50,
+        "SKL": 40
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J39_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J39_P2",
+      "name": "레스토랑 경영자 전문 프로젝트",
+      "grade": "P2",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J39"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 60,
+        "SKL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J39_P1"
+        ],
+        "events": [
+          "E_J39_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J39_P3A",
+      "name": "레스토랑 경영자 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J39"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 72,
+        "SKL": 62
+      },
+      "prerequisites": {
+        "projects": [
+          "J39_P2"
+        ],
+        "events": [
+          "E_J39_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J40_P1",
+      "name": "대기업 CEO 기초 실습",
+      "grade": "P1",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J40"
+      ],
+      "min_age": 13,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 6
+        }
+      ],
+      "required_stats": {
+        "SOC": 60,
+        "INT": 45
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_J40_SEED"
+        ]
+      },
+      "ap": 2,
+      "cost": 40,
+      "success_threshold": 50,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 2,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J40_P2",
+      "name": "대기업 CEO 전문 프로젝트",
+      "grade": "P2",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J40"
+      ],
+      "min_age": 16,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 70,
+        "INT": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J40_P1"
+        ],
+        "events": [
+          "E_J40_SEED"
+        ]
+      },
+      "ap": 3,
+      "cost": 120,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 4,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J40_P3A",
+      "name": "대기업 CEO 대표 프로젝트 I",
+      "grade": "P3",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J40"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 82,
+        "INT": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J40_P2"
+        ],
+        "events": [
+          "E_J40_STAGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J40_P3B",
+      "name": "대기업 CEO 대표 프로젝트 II",
+      "grade": "P3",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J40"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 84,
+        "INT": 69
+      },
+      "prerequisites": {
+        "projects": [
+          "J40_P3A"
+        ],
+        "events": [
+          "E_J40_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 200,
+      "success_threshold": 75,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 6,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    },
+    {
+      "id": "J40_M",
+      "name": "대기업 CEO 마스터 업적",
+      "grade": "M",
+      "facility": "guild",
+      "linked_job_ids": [
+        "J40"
+      ],
+      "min_age": 18,
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 87,
+        "INT": 72
+      },
+      "prerequisites": {
+        "projects": [
+          "J40_P3B"
+        ],
+        "events": [
+          "E_J40_BRIDGE"
+        ]
+      },
+      "ap": 4,
+      "cost": 250,
+      "success_threshold": 85,
+      "failure": {
+        "stress": 5,
+        "refund": false
+      },
+      "rewards": {
+        "career_confidence": 10,
+        "happiness": 1,
+        "master_bonus": 0
+      },
+      "retryable": true
+    }
+  ],
+  "events": [
+    {
+      "id": "E_J01_SEED",
+      "name": "간호사 진로 체험",
+      "min_age": 12,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J01_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J01_STAGE",
+      "name": "간호사 진로 실습 발표",
+      "min_age": 16,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J01_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J01_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J02_SEED",
+      "name": "물리치료사 진로 체험",
+      "min_age": 12,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "VIT": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J02_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J02_STAGE",
+      "name": "물리치료사 진로 실습 발표",
+      "min_age": 16,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "knights",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "VIT": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J02_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J02_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J03_SEED",
+      "name": "임상병리사 진로 체험",
+      "min_age": 12,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J03_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J03_STAGE",
+      "name": "임상병리사 진로 실습 발표",
+      "min_age": 16,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J03_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J03_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J04_SEED",
+      "name": "약사 진로 체험",
+      "min_age": 12,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J04_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J04_STAGE",
+      "name": "약사 진로 실습 발표",
+      "min_age": 16,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "workshop",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "SKL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J04_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J04_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J05_SEED",
+      "name": "의사 진로 체험",
+      "min_age": 12,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 35,
+        "WIL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J05_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J05_STAGE",
+      "name": "의사 진로 실습 발표",
+      "min_age": 16,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 70,
+        "WIL": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J05_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J05_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J05_BRIDGE",
+      "name": "의사 지구 진로 설계",
+      "min_age": 18,
+      "facility": "healing",
+      "education": [
+        {
+          "facility": "healing",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 82,
+        "WIL": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J05_P3A"
+        ],
+        "events": []
+      },
+      "ear_min": 50,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J05_bridge"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J06_SEED",
+      "name": "학원 강사 진로 체험",
+      "min_age": 12,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J06_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J07_SEED",
+      "name": "학교 교사 진로 체험",
+      "min_age": 12,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J07_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J07_STAGE",
+      "name": "학교 교사 진로 실습 발표",
+      "min_age": 16,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SOC": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J07_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J07_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J08_SEED",
+      "name": "과학 연구원 진로 체험",
+      "min_age": 12,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J08_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J08_STAGE",
+      "name": "과학 연구원 진로 실습 발표",
+      "min_age": 16,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J08_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J08_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J09_SEED",
+      "name": "대학 교수 진로 체험",
+      "min_age": 12,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 35,
+        "WIL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J09_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J09_STAGE",
+      "name": "대학 교수 진로 실습 발표",
+      "min_age": 16,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 70,
+        "WIL": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J09_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J09_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J09_BRIDGE",
+      "name": "대학 교수 지구 진로 설계",
+      "min_age": 18,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 82,
+        "WIL": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J09_P3A"
+        ],
+        "events": []
+      },
+      "ear_min": 50,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J09_bridge"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J10_SEED",
+      "name": "학술 저술가 진로 체험",
+      "min_age": 12,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J10_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J10_STAGE",
+      "name": "학술 저술가 진로 실습 발표",
+      "min_age": 16,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "tower",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "SEN": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J10_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J10_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J11_SEED",
+      "name": "사무직 회사원 진로 체험",
+      "min_age": 12,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J11_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J12_SEED",
+      "name": "인사·조직 관리자 진로 체험",
+      "min_age": 12,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SOC": 30,
+        "INT": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J12_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J12_STAGE",
+      "name": "인사·조직 관리자 진로 실습 발표",
+      "min_age": 16,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 50,
+        "INT": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J12_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J12_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J13_SEED",
+      "name": "금융 분석가 진로 체험",
+      "min_age": 12,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J13_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J13_STAGE",
+      "name": "금융 분석가 진로 실습 발표",
+      "min_age": 16,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J13_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J13_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J14_SEED",
+      "name": "공인회계사 진로 체험",
+      "min_age": 12,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J14_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J14_STAGE",
+      "name": "공인회계사 진로 실습 발표",
+      "min_age": 16,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 60,
+        "SKL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J14_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J14_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J15_SEED",
+      "name": "변호사 진로 체험",
+      "min_age": 12,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 35,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J15_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J15_STAGE",
+      "name": "변호사 진로 실습 발표",
+      "min_age": 16,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 70,
+        "SOC": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J15_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J15_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J15_BRIDGE",
+      "name": "변호사 지구 진로 설계",
+      "min_age": 18,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 82,
+        "SOC": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J15_P3A"
+        ],
+        "events": []
+      },
+      "ear_min": 50,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J15_bridge"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J16_SEED",
+      "name": "일러스트레이터 진로 체험",
+      "min_age": 12,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SEN": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J16_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J17_SEED",
+      "name": "무용수 진로 체험",
+      "min_age": 12,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "VIT": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J17_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J17_STAGE",
+      "name": "무용수 진로 실습 발표",
+      "min_age": 16,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "knights",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "VIT": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J17_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J17_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J18_SEED",
+      "name": "뮤지컬 배우 진로 체험",
+      "min_age": 12,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "CHA": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J18_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J18_STAGE",
+      "name": "뮤지컬 배우 진로 실습 발표",
+      "min_age": 16,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J18_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J18_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J19_SEED",
+      "name": "가수 진로 체험",
+      "min_age": 12,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SEN": 30,
+        "CHA": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J19_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J19_STAGE",
+      "name": "가수 진로 실습 발표",
+      "min_age": 16,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SEN": 60,
+        "CHA": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J19_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J19_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J20_SEED",
+      "name": "유명 배우 진로 체험",
+      "min_age": 12,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "CHA": 35,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J20_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J20_STAGE",
+      "name": "유명 배우 진로 실습 발표",
+      "min_age": 16,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 70,
+        "SEN": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J20_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J20_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J20_BRIDGE",
+      "name": "유명 배우 지구 진로 설계",
+      "min_age": 18,
+      "facility": "theater",
+      "education": [
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 82,
+        "SEN": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J20_P3A"
+        ],
+        "events": []
+      },
+      "ear_min": 50,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J20_bridge"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J21_SEED",
+      "name": "네일 아티스트 진로 체험",
+      "min_age": 12,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J21_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J22_SEED",
+      "name": "헤어 디자이너 진로 체험",
+      "min_age": 12,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "CHA": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J22_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J22_STAGE",
+      "name": "헤어 디자이너 진로 실습 발표",
+      "min_age": 16,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "CHA": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J22_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J22_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J23_SEED",
+      "name": "메이크업 아티스트 진로 체험",
+      "min_age": 12,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J23_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J23_STAGE",
+      "name": "메이크업 아티스트 진로 실습 발표",
+      "min_age": 16,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J23_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J23_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J24_SEED",
+      "name": "패션 디자이너 진로 체험",
+      "min_age": 12,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SEN": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J24_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J24_STAGE",
+      "name": "패션 디자이너 진로 실습 발표",
+      "min_age": 16,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SEN": 60,
+        "SKL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J24_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J24_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J25_SEED",
+      "name": "톱모델 진로 체험",
+      "min_age": 12,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "CHA": 35,
+        "WIL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J25_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J25_STAGE",
+      "name": "톱모델 진로 실습 발표",
+      "min_age": 16,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 70,
+        "WIL": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J25_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J25_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J25_BRIDGE",
+      "name": "톱모델 지구 진로 설계",
+      "min_age": 18,
+      "facility": "beauty",
+      "education": [
+        {
+          "facility": "beauty",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "theater",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "CHA": 82,
+        "WIL": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J25_P3A"
+        ],
+        "events": []
+      },
+      "ear_min": 50,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J25_bridge"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J26_SEED",
+      "name": "피트니스 트레이너 진로 체험",
+      "min_age": 12,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "VIT": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J26_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J27_SEED",
+      "name": "스포츠 코치 진로 체험",
+      "min_age": 12,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "VIT": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J27_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J27_STAGE",
+      "name": "스포츠 코치 진로 실습 발표",
+      "min_age": 16,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 50,
+        "SOC": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J27_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J27_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J28_SEED",
+      "name": "요가·필라테스 지도자 진로 체험",
+      "min_age": 12,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "VIT": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J28_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J28_STAGE",
+      "name": "요가·필라테스 지도자 진로 실습 발표",
+      "min_age": 16,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 50,
+        "SEN": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J28_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J28_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J29_SEED",
+      "name": "프로 운동선수 진로 체험",
+      "min_age": 12,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "VIT": 30,
+        "WIL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J29_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J29_STAGE",
+      "name": "프로 운동선수 진로 실습 발표",
+      "min_age": 16,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 60,
+        "WIL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J29_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J29_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J30_SEED",
+      "name": "세계적인 스포츠 스타 진로 체험",
+      "min_age": 12,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "VIT": 35,
+        "WIL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J30_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J30_STAGE",
+      "name": "세계적인 스포츠 스타 진로 실습 발표",
+      "min_age": 16,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 70,
+        "WIL": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J30_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J30_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J30_BRIDGE",
+      "name": "세계적인 스포츠 스타 지구 진로 설계",
+      "min_age": 18,
+      "facility": "knights",
+      "education": [
+        {
+          "facility": "knights",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "VIT": 82,
+        "WIL": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J30_P3A"
+        ],
+        "events": []
+      },
+      "ear_min": 50,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J30_bridge"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J31_SEED",
+      "name": "영상 편집자 진로 체험",
+      "min_age": 12,
+      "facility": "tower",
+      "education": [
+        {
+          "facility": "tower",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J31_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J32_SEED",
+      "name": "소프트웨어 개발자 진로 체험",
+      "min_age": 12,
+      "facility": "workshop",
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "INT": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J32_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J32_STAGE",
+      "name": "소프트웨어 개발자 진로 실습 발표",
+      "min_age": 16,
+      "facility": "workshop",
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "tower",
+          "stage": "advanced",
+          "count": 8
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "INT": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J32_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J32_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J33_SEED",
+      "name": "데이터 사이언티스트 진로 체험",
+      "min_age": 12,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "INT": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J33_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J33_STAGE",
+      "name": "데이터 사이언티스트 진로 실습 발표",
+      "min_age": 16,
+      "facility": "academy",
+      "education": [
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "tower",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "INT": 50,
+        "SKL": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J33_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J33_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J34_SEED",
+      "name": "방송 프로듀서 진로 체험",
+      "min_age": 12,
+      "facility": "tower",
+      "education": [
+        {
+          "facility": "tower",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J34_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J34_STAGE",
+      "name": "방송 프로듀서 진로 실습 발표",
+      "min_age": 16,
+      "facility": "tower",
+      "education": [
+        {
+          "facility": "tower",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 60,
+        "SEN": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J34_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J34_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J35_SEED",
+      "name": "글로벌 IT 창업가 진로 체험",
+      "min_age": 12,
+      "facility": "workshop",
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 35,
+        "INT": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J35_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J35_STAGE",
+      "name": "글로벌 IT 창업가 진로 실습 발표",
+      "min_age": 16,
+      "facility": "workshop",
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 70,
+        "INT": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J35_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J35_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J35_BRIDGE",
+      "name": "글로벌 IT 창업가 지구 진로 설계",
+      "min_age": 18,
+      "facility": "workshop",
+      "education": [
+        {
+          "facility": "workshop",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 82,
+        "INT": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J35_P3A"
+        ],
+        "events": []
+      },
+      "ear_min": 50,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J35_bridge"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J36_SEED",
+      "name": "바리스타 진로 체험",
+      "min_age": 12,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J36_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J37_SEED",
+      "name": "호텔리어 진로 체험",
+      "min_age": 12,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SOC": 30,
+        "CHA": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J37_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J37_STAGE",
+      "name": "호텔리어 진로 실습 발표",
+      "min_age": 16,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 50,
+        "CHA": 40
+      },
+      "prerequisites": {
+        "projects": [
+          "J37_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J37_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J38_SEED",
+      "name": "셰프 진로 체험",
+      "min_age": 12,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SKL": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J38_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J38_STAGE",
+      "name": "셰프 진로 실습 발표",
+      "min_age": 16,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SKL": 50,
+        "SEN": 45
+      },
+      "prerequisites": {
+        "projects": [
+          "J38_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J38_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J39_SEED",
+      "name": "레스토랑 경영자 진로 체험",
+      "min_age": 12,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SOC": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J39_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J39_STAGE",
+      "name": "레스토랑 경영자 진로 실습 발표",
+      "min_age": 16,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 60,
+        "SKL": 50
+      },
+      "prerequisites": {
+        "projects": [
+          "J39_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J39_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J40_SEED",
+      "name": "대기업 CEO 진로 체험",
+      "min_age": 12,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "intro",
+          "count": 3
+        }
+      ],
+      "required_stats": {
+        "SOC": 35,
+        "INT": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J40_seed"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J40_STAGE",
+      "name": "대기업 CEO 진로 실습 발표",
+      "min_age": 16,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 70,
+        "INT": 55
+      },
+      "prerequisites": {
+        "projects": [
+          "J40_P2"
+        ],
+        "events": []
+      },
+      "ear_min": 25,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J40_stage"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_J40_BRIDGE",
+      "name": "대기업 CEO 지구 진로 설계",
+      "min_age": 18,
+      "facility": "guild",
+      "education": [
+        {
+          "facility": "guild",
+          "stage": "professional",
+          "count": 10
+        },
+        {
+          "facility": "academy",
+          "stage": "professional",
+          "count": 10
+        }
+      ],
+      "required_stats": {
+        "SOC": 82,
+        "INT": 67
+      },
+      "prerequisites": {
+        "projects": [
+          "J40_P3A"
+        ],
+        "events": []
+      },
+      "ear_min": 50,
+      "counters": {},
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "J40_bridge"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S01_FOUND",
+      "name": "헬창게이: 관심과 재능 발견",
+      "min_age": 13,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "VIT": 32,
+        "WIL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {
+        "fitness": 8
+      },
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S01_found"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S01_VISION",
+      "name": "헬창게이: 미래 생활 설계",
+      "min_age": 18,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "VIT": 70,
+        "WIL": 52
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_S01_FOUND"
+        ]
+      },
+      "ear_min": 45,
+      "counters": {
+        "fitness": 16
+      },
+      "relation_min": 0,
+      "value_min": {
+        "discipline": 45
+      },
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S01_vision"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S02_FOUND",
+      "name": "클럽 죽돌이: 관심과 재능 발견",
+      "min_age": 13,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "SEN": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {
+        "dance": 3,
+        "music": 3
+      },
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S02_found"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S02_VISION",
+      "name": "클럽 죽돌이: 미래 생활 설계",
+      "min_age": 18,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "SEN": 58,
+        "SOC": 61
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_S02_FOUND"
+        ]
+      },
+      "ear_min": 40,
+      "counters": {
+        "dance": 6,
+        "music": 6
+      },
+      "relation_min": 0,
+      "value_min": {
+        "expression": 45
+      },
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S02_vision"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S03_FOUND",
+      "name": "전설의 모임장: 관심과 재능 발견",
+      "min_age": 13,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "SOC": 33,
+        "WIL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {
+        "community": 3,
+        "leadership": 3
+      },
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S03_found"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S03_VISION",
+      "name": "전설의 모임장: 미래 생활 설계",
+      "min_age": 18,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "SOC": 71,
+        "WIL": 56
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_S03_FOUND"
+        ]
+      },
+      "ear_min": 45,
+      "counters": {
+        "community": 7,
+        "leadership": 7
+      },
+      "relation_min": 65,
+      "value_min": {
+        "leadership": 50
+      },
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S03_vision"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S04_FOUND",
+      "name": "연애 마스터: 관심과 재능 발견",
+      "min_age": 13,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "SEN": 30,
+        "SOC": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {
+        "friendship": 2,
+        "romance": 2
+      },
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S04_found"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S04_VISION",
+      "name": "연애 마스터: 미래 생활 설계",
+      "min_age": 18,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "SEN": 63,
+        "SOC": 65
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_S04_FOUND"
+        ]
+      },
+      "ear_min": 45,
+      "counters": {
+        "friendship": 5,
+        "romance": 5
+      },
+      "relation_min": 65,
+      "value_min": {
+        "empathy": 50
+      },
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S04_vision"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S05_FOUND",
+      "name": "SNS 셀럽: 관심과 재능 발견",
+      "min_age": 13,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "CHA": 30,
+        "SKL": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {
+        "digital": 3,
+        "creative": 3
+      },
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S05_found"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S05_VISION",
+      "name": "SNS 셀럽: 미래 생활 설계",
+      "min_age": 18,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "CHA": 68,
+        "SKL": 58
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_S05_FOUND"
+        ]
+      },
+      "ear_min": 45,
+      "counters": {
+        "digital": 6,
+        "creative": 6
+      },
+      "relation_min": 0,
+      "value_min": {
+        "visibility": 45
+      },
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S05_vision"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S06_FOUND",
+      "name": "자유로운 백수: 관심과 재능 발견",
+      "min_age": 13,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "WIL": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {
+        "independence": 2,
+        "creative": 2
+      },
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S06_found"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S06_VISION",
+      "name": "자유로운 백수: 미래 생활 설계",
+      "min_age": 18,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "WIL": 55,
+        "SEN": 50
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_S06_FOUND"
+        ]
+      },
+      "ear_min": 55,
+      "counters": {
+        "independence": 5,
+        "creative": 5
+      },
+      "relation_min": 0,
+      "value_min": {
+        "independence": 45
+      },
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S06_vision"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S07_FOUND",
+      "name": "이태원 밤의 황제: 관심과 재능 발견",
+      "min_age": 13,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "CHA": 34,
+        "SOC": 36
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {
+        "dance": 2,
+        "community": 2,
+        "leadership": 2
+      },
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S07_found"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S07_VISION",
+      "name": "이태원 밤의 황제: 미래 생활 설계",
+      "min_age": 18,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "CHA": 72,
+        "SOC": 74
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_S07_FOUND"
+        ]
+      },
+      "ear_min": 55,
+      "counters": {
+        "dance": 5,
+        "community": 5,
+        "leadership": 5
+      },
+      "relation_min": 70,
+      "value_min": {
+        "leadership": 50
+      },
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S07_vision"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S08_FOUND",
+      "name": "세계의 방랑자: 관심과 재능 발견",
+      "min_age": 13,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "VIT": 30,
+        "SEN": 30
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": []
+      },
+      "ear_min": 0,
+      "counters": {
+        "travel": 3,
+        "independence": 3
+      },
+      "relation_min": 0,
+      "value_min": {},
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S08_found"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    },
+    {
+      "id": "E_S08_VISION",
+      "name": "세계의 방랑자: 미래 생활 설계",
+      "min_age": 18,
+      "facility": null,
+      "education": [],
+      "required_stats": {
+        "VIT": 58,
+        "SEN": 64
+      },
+      "prerequisites": {
+        "projects": [],
+        "events": [
+          "E_S08_FOUND"
+        ]
+      },
+      "ear_min": 60,
+      "counters": {
+        "travel": 6,
+        "independence": 6
+      },
+      "relation_min": 0,
+      "value_min": {
+        "exploration": 45
+      },
+      "autonomy_min": 0,
+      "ap": 1,
+      "cost": 0,
+      "success_threshold": 65,
+      "failure": {
+        "stress": 3,
+        "refund": false
+      },
+      "rewards": {
+        "flags": [
+          "S08_vision"
+        ],
+        "career_confidence": 3,
+        "happiness": 1
+      },
+      "retryable": true
+    }
+  ]
+}

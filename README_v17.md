@@ -1,0 +1,1 @@
+MGL v1.7: python mgl_v17_strategy_test.py 로 7전략 × 3목표 × 24개월 검증. 기존 게임 실행: python mgl_web.py\n

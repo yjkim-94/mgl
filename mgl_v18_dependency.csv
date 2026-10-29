@@ -1,0 +1,23 @@
+﻿ending,name,required_stats,required_education,required_projects,required_events,ear_min,additional_conditions
+J04,약사,"{""INT"": 80, ""SKL"": 70}","[{""facility"": ""healing"", ""stage"": ""professional"", ""count"": 10}, {""facility"": ""workshop"", ""stage"": ""advanced"", ""count"": 8}]",J04_P2;J04_P3A,E_J04_SEED;E_J04_STAGE,55,{}
+J05,의사,"{""INT"": 90, ""WIL"": 75}","[{""facility"": ""healing"", ""stage"": ""professional"", ""count"": 10}, {""facility"": ""academy"", ""stage"": ""professional"", ""count"": 10}]",J05_P2;J05_P3A;J05_P3B;J05_M,E_J05_SEED;E_J05_STAGE;E_J05_BRIDGE,65,{}
+J09,대학 교수,"{""INT"": 90, ""WIL"": 75}","[{""facility"": ""academy"", ""stage"": ""professional"", ""count"": 10}]",J09_P2;J09_P3A;J09_P3B;J09_M,E_J09_SEED;E_J09_STAGE;E_J09_BRIDGE,65,{}
+J10,학술 저술가,"{""INT"": 80, ""SEN"": 70}","[{""facility"": ""academy"", ""stage"": ""professional"", ""count"": 10}, {""facility"": ""tower"", ""stage"": ""advanced"", ""count"": 8}]",J10_P2;J10_P3A,E_J10_SEED;E_J10_STAGE,55,{}
+J14,공인회계사,"{""INT"": 80, ""SKL"": 70}","[{""facility"": ""guild"", ""stage"": ""professional"", ""count"": 10}, {""facility"": ""academy"", ""stage"": ""professional"", ""count"": 10}]",J14_P2;J14_P3A,E_J14_SEED;E_J14_STAGE,55,{}
+J15,변호사,"{""INT"": 90, ""SOC"": 75}","[{""facility"": ""academy"", ""stage"": ""professional"", ""count"": 10}]",J15_P2;J15_P3A;J15_P3B;J15_M,E_J15_SEED;E_J15_STAGE;E_J15_BRIDGE,65,{}
+J19,가수,"{""SEN"": 80, ""CHA"": 70}","[{""facility"": ""theater"", ""stage"": ""professional"", ""count"": 10}]",J19_P2;J19_P3A,E_J19_SEED;E_J19_STAGE,55,{}
+J20,유명 배우,"{""CHA"": 90, ""SEN"": 75}","[{""facility"": ""theater"", ""stage"": ""professional"", ""count"": 10}]",J20_P2;J20_P3A;J20_P3B;J20_M,E_J20_SEED;E_J20_STAGE;E_J20_BRIDGE,65,{}
+J24,패션 디자이너,"{""SEN"": 80, ""SKL"": 70}","[{""facility"": ""beauty"", ""stage"": ""professional"", ""count"": 10}]",J24_P2;J24_P3A,E_J24_SEED;E_J24_STAGE,55,{}
+J25,톱모델,"{""CHA"": 90, ""WIL"": 75}","[{""facility"": ""beauty"", ""stage"": ""professional"", ""count"": 10}, {""facility"": ""theater"", ""stage"": ""professional"", ""count"": 10}]",J25_P2;J25_P3A;J25_P3B;J25_M,E_J25_SEED;E_J25_STAGE;E_J25_BRIDGE,65,{}
+J29,프로 운동선수,"{""VIT"": 80, ""WIL"": 70}","[{""facility"": ""knights"", ""stage"": ""professional"", ""count"": 10}]",J29_P2;J29_P3A,E_J29_SEED;E_J29_STAGE,55,{}
+J30,세계적인 스포츠 스타,"{""VIT"": 90, ""WIL"": 75}","[{""facility"": ""knights"", ""stage"": ""professional"", ""count"": 10}]",J30_P2;J30_P3A;J30_P3B;J30_M,E_J30_SEED;E_J30_STAGE;E_J30_BRIDGE,65,{}
+J34,방송 프로듀서,"{""SKL"": 80, ""SEN"": 70}","[{""facility"": ""tower"", ""stage"": ""professional"", ""count"": 10}]",J34_P2;J34_P3A,E_J34_SEED;E_J34_STAGE,55,{}
+J35,글로벌 IT 창업가,"{""SKL"": 90, ""INT"": 75}","[{""facility"": ""workshop"", ""stage"": ""professional"", ""count"": 10}, {""facility"": ""guild"", ""stage"": ""professional"", ""count"": 10}]",J35_P2;J35_P3A;J35_P3B;J35_M,E_J35_SEED;E_J35_STAGE;E_J35_BRIDGE,65,{}
+J39,레스토랑 경영자,"{""SOC"": 80, ""SKL"": 70}","[{""facility"": ""guild"", ""stage"": ""professional"", ""count"": 10}]",J39_P2;J39_P3A,E_J39_SEED;E_J39_STAGE,55,{}
+J40,대기업 CEO,"{""SOC"": 90, ""INT"": 75}","[{""facility"": ""guild"", ""stage"": ""professional"", ""count"": 10}, {""facility"": ""academy"", ""stage"": ""professional"", ""count"": 10}]",J40_P2;J40_P3A;J40_P3B;J40_M,E_J40_SEED;E_J40_STAGE;E_J40_BRIDGE,65,{}
+S01,헬창게이,"{""VIT"": 82, ""WIL"": 64}",[],,E_S01_FOUND;E_S01_VISION,55,{}
+S03,전설의 모임장,"{""SOC"": 83, ""WIL"": 68}",[],,E_S03_FOUND;E_S03_VISION,55,"{""strong_bonds"": 2, ""flags"": []}"
+S04,연애 마스터,"{""SEN"": 75, ""SOC"": 77}",[],,E_S04_FOUND;E_S04_VISION,55,"{""strong_bonds"": 1, ""flags"": [""respectful_dialogue""]}"
+S05,SNS 셀럽,"{""CHA"": 80, ""SKL"": 70}",[],,E_S05_FOUND;E_S05_VISION,55,{}
+S07,이태원 밤의 황제,"{""CHA"": 84, ""SOC"": 86}",[],,E_S07_FOUND;E_S07_VISION,65,"{""strong_bonds"": 2, ""flags"": [""shared_community""]}"
+S08,세계의 방랑자,"{""VIT"": 70, ""SEN"": 76}",[],,E_S08_FOUND;E_S08_VISION,70,{}

@@ -1,0 +1,2027 @@
+{
+  "schema_version": "1.1",
+  "note": "career names aligned to user-provided 40; numeric thresholds originate in uploaded v0.9 with proposed EAR/event extensions",
+  "endings": [
+    {
+      "id": "J01",
+      "name": "간호사",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "healing",
+      "mandatory": {
+        "stats": {
+          "INT": 70,
+          "SEN": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "healing",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J01_P2"
+        ],
+        "events": [
+          "E_J01_SEED",
+          "E_J01_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": true,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 간호사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J02",
+      "name": "물리치료사",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "healing",
+      "mandatory": {
+        "stats": {
+          "INT": 70,
+          "VIT": 60
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "healing",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "knights",
+            "stage": "advanced",
+            "count": 8
+          }
+        ],
+        "projects": [
+          "J02_P2"
+        ],
+        "events": [
+          "E_J02_SEED",
+          "E_J02_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": true,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 물리치료사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J03",
+      "name": "임상병리사",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "healing",
+      "mandatory": {
+        "stats": {
+          "INT": 70,
+          "SKL": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "healing",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "academy",
+            "stage": "advanced",
+            "count": 8
+          }
+        ],
+        "projects": [
+          "J03_P2"
+        ],
+        "events": [
+          "E_J03_SEED",
+          "E_J03_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": true,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 임상병리사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J04",
+      "name": "약사",
+      "type": "career",
+      "grade": "A",
+      "linked_facility": "healing",
+      "mandatory": {
+        "stats": {
+          "INT": 80,
+          "SKL": 70
+        },
+        "ear_min": 55,
+        "education": [
+          {
+            "facility": "healing",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "workshop",
+            "stage": "advanced",
+            "count": 8
+          }
+        ],
+        "projects": [
+          "J04_P2",
+          "J04_P3A"
+        ],
+        "events": [
+          "E_J04_SEED",
+          "E_J04_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 300,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": true,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 약사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J05",
+      "name": "의사",
+      "type": "career",
+      "grade": "S",
+      "linked_facility": "healing",
+      "mandatory": {
+        "stats": {
+          "INT": 90,
+          "WIL": 75
+        },
+        "ear_min": 65,
+        "education": [
+          {
+            "facility": "healing",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J05_P2",
+          "J05_P3A",
+          "J05_P3B",
+          "J05_M"
+        ],
+        "events": [
+          "E_J05_SEED",
+          "E_J05_STAGE",
+          "E_J05_BRIDGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 400,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": true,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 의사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J06",
+      "name": "학원 강사",
+      "type": "career",
+      "grade": "C",
+      "linked_facility": "academy",
+      "mandatory": {
+        "stats": {
+          "INT": 55,
+          "SOC": 50
+        },
+        "ear_min": 35,
+        "education": [
+          {
+            "facility": "academy",
+            "stage": "intro",
+            "count": 6
+          }
+        ],
+        "projects": [
+          "J06_P1"
+        ],
+        "events": [
+          "E_J06_SEED"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 100,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 학원 강사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J07",
+      "name": "학교 교사",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "academy",
+      "mandatory": {
+        "stats": {
+          "INT": 70,
+          "SOC": 60
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J07_P2"
+        ],
+        "events": [
+          "E_J07_SEED",
+          "E_J07_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": true,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 학교 교사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J08",
+      "name": "과학 연구원",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "academy",
+      "mandatory": {
+        "stats": {
+          "INT": 70,
+          "SKL": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J08_P2"
+        ],
+        "events": [
+          "E_J08_SEED",
+          "E_J08_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 과학 연구원(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J09",
+      "name": "대학 교수",
+      "type": "career",
+      "grade": "S",
+      "linked_facility": "academy",
+      "mandatory": {
+        "stats": {
+          "INT": 90,
+          "WIL": 75
+        },
+        "ear_min": 65,
+        "education": [
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J09_P2",
+          "J09_P3A",
+          "J09_P3B",
+          "J09_M"
+        ],
+        "events": [
+          "E_J09_SEED",
+          "E_J09_STAGE",
+          "E_J09_BRIDGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 400,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 대학 교수(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J10",
+      "name": "학술 저술가",
+      "type": "career",
+      "grade": "A",
+      "linked_facility": "academy",
+      "mandatory": {
+        "stats": {
+          "INT": 80,
+          "SEN": 70
+        },
+        "ear_min": 55,
+        "education": [
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "tower",
+            "stage": "advanced",
+            "count": 8
+          }
+        ],
+        "projects": [
+          "J10_P2",
+          "J10_P3A"
+        ],
+        "events": [
+          "E_J10_SEED",
+          "E_J10_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 300,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 학술 저술가(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J11",
+      "name": "사무직 회사원",
+      "type": "career",
+      "grade": "C",
+      "linked_facility": "academy",
+      "mandatory": {
+        "stats": {
+          "INT": 55,
+          "SKL": 50
+        },
+        "ear_min": 35,
+        "education": [
+          {
+            "facility": "academy",
+            "stage": "intro",
+            "count": 6
+          }
+        ],
+        "projects": [
+          "J11_P1"
+        ],
+        "events": [
+          "E_J11_SEED"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 100,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 사무직 회사원(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J12",
+      "name": "인사·조직 관리자",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "guild",
+      "mandatory": {
+        "stats": {
+          "SOC": 70,
+          "INT": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "guild",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J12_P2"
+        ],
+        "events": [
+          "E_J12_SEED",
+          "E_J12_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 인사·조직 관리자(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J13",
+      "name": "금융 분석가",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "guild",
+      "mandatory": {
+        "stats": {
+          "INT": 70,
+          "SKL": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "guild",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J13_P2"
+        ],
+        "events": [
+          "E_J13_SEED",
+          "E_J13_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 금융 분석가(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J14",
+      "name": "공인회계사",
+      "type": "career",
+      "grade": "A",
+      "linked_facility": "guild",
+      "mandatory": {
+        "stats": {
+          "INT": 80,
+          "SKL": 70
+        },
+        "ear_min": 55,
+        "education": [
+          {
+            "facility": "guild",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J14_P2",
+          "J14_P3A"
+        ],
+        "events": [
+          "E_J14_SEED",
+          "E_J14_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 300,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": true,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 공인회계사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J15",
+      "name": "변호사",
+      "type": "career",
+      "grade": "S",
+      "linked_facility": "academy",
+      "mandatory": {
+        "stats": {
+          "INT": 90,
+          "SOC": 75
+        },
+        "ear_min": 65,
+        "education": [
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J15_P2",
+          "J15_P3A",
+          "J15_P3B",
+          "J15_M"
+        ],
+        "events": [
+          "E_J15_SEED",
+          "E_J15_STAGE",
+          "E_J15_BRIDGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 400,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": true,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 변호사(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J16",
+      "name": "일러스트레이터",
+      "type": "career",
+      "grade": "C",
+      "linked_facility": "theater",
+      "mandatory": {
+        "stats": {
+          "SEN": 55,
+          "SKL": 50
+        },
+        "ear_min": 35,
+        "education": [
+          {
+            "facility": "theater",
+            "stage": "intro",
+            "count": 6
+          }
+        ],
+        "projects": [
+          "J16_P1"
+        ],
+        "events": [
+          "E_J16_SEED"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 100,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 일러스트레이터(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J17",
+      "name": "무용수",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "theater",
+      "mandatory": {
+        "stats": {
+          "VIT": 70,
+          "SEN": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "theater",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "knights",
+            "stage": "advanced",
+            "count": 8
+          }
+        ],
+        "projects": [
+          "J17_P2"
+        ],
+        "events": [
+          "E_J17_SEED",
+          "E_J17_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 무용수(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J18",
+      "name": "뮤지컬 배우",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "theater",
+      "mandatory": {
+        "stats": {
+          "CHA": 70,
+          "SEN": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "theater",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J18_P2"
+        ],
+        "events": [
+          "E_J18_SEED",
+          "E_J18_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 뮤지컬 배우(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J19",
+      "name": "가수",
+      "type": "career",
+      "grade": "A",
+      "linked_facility": "theater",
+      "mandatory": {
+        "stats": {
+          "SEN": 80,
+          "CHA": 70
+        },
+        "ear_min": 55,
+        "education": [
+          {
+            "facility": "theater",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J19_P2",
+          "J19_P3A"
+        ],
+        "events": [
+          "E_J19_SEED",
+          "E_J19_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 300,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 가수(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J20",
+      "name": "유명 배우",
+      "type": "career",
+      "grade": "S",
+      "linked_facility": "theater",
+      "mandatory": {
+        "stats": {
+          "CHA": 90,
+          "SEN": 75
+        },
+        "ear_min": 65,
+        "education": [
+          {
+            "facility": "theater",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J20_P2",
+          "J20_P3A",
+          "J20_P3B",
+          "J20_M"
+        ],
+        "events": [
+          "E_J20_SEED",
+          "E_J20_STAGE",
+          "E_J20_BRIDGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 400,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 유명 배우(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J21",
+      "name": "네일 아티스트",
+      "type": "career",
+      "grade": "C",
+      "linked_facility": "beauty",
+      "mandatory": {
+        "stats": {
+          "SKL": 55,
+          "SEN": 50
+        },
+        "ear_min": 35,
+        "education": [
+          {
+            "facility": "beauty",
+            "stage": "intro",
+            "count": 6
+          }
+        ],
+        "projects": [
+          "J21_P1"
+        ],
+        "events": [
+          "E_J21_SEED"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 100,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 네일 아티스트(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J22",
+      "name": "헤어 디자이너",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "beauty",
+      "mandatory": {
+        "stats": {
+          "SKL": 70,
+          "CHA": 60
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "beauty",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J22_P2"
+        ],
+        "events": [
+          "E_J22_SEED",
+          "E_J22_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 헤어 디자이너(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J23",
+      "name": "메이크업 아티스트",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "beauty",
+      "mandatory": {
+        "stats": {
+          "SKL": 70,
+          "SEN": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "beauty",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J23_P2"
+        ],
+        "events": [
+          "E_J23_SEED",
+          "E_J23_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 메이크업 아티스트(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J24",
+      "name": "패션 디자이너",
+      "type": "career",
+      "grade": "A",
+      "linked_facility": "beauty",
+      "mandatory": {
+        "stats": {
+          "SEN": 80,
+          "SKL": 70
+        },
+        "ear_min": 55,
+        "education": [
+          {
+            "facility": "beauty",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J24_P2",
+          "J24_P3A"
+        ],
+        "events": [
+          "E_J24_SEED",
+          "E_J24_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 300,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 패션 디자이너(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J25",
+      "name": "톱모델",
+      "type": "career",
+      "grade": "S",
+      "linked_facility": "beauty",
+      "mandatory": {
+        "stats": {
+          "CHA": 90,
+          "WIL": 75
+        },
+        "ear_min": 65,
+        "education": [
+          {
+            "facility": "beauty",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "theater",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J25_P2",
+          "J25_P3A",
+          "J25_P3B",
+          "J25_M"
+        ],
+        "events": [
+          "E_J25_SEED",
+          "E_J25_STAGE",
+          "E_J25_BRIDGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 400,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 톱모델(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J26",
+      "name": "피트니스 트레이너",
+      "type": "career",
+      "grade": "C",
+      "linked_facility": "knights",
+      "mandatory": {
+        "stats": {
+          "VIT": 55,
+          "SOC": 50
+        },
+        "ear_min": 35,
+        "education": [
+          {
+            "facility": "knights",
+            "stage": "intro",
+            "count": 6
+          }
+        ],
+        "projects": [
+          "J26_P1"
+        ],
+        "events": [
+          "E_J26_SEED"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 100,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 피트니스 트레이너(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J27",
+      "name": "스포츠 코치",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "knights",
+      "mandatory": {
+        "stats": {
+          "VIT": 70,
+          "SOC": 60
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "knights",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J27_P2"
+        ],
+        "events": [
+          "E_J27_SEED",
+          "E_J27_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 스포츠 코치(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J28",
+      "name": "요가·필라테스 지도자",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "knights",
+      "mandatory": {
+        "stats": {
+          "VIT": 70,
+          "SEN": 60
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "knights",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J28_P2"
+        ],
+        "events": [
+          "E_J28_SEED",
+          "E_J28_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 요가·필라테스 지도자(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J29",
+      "name": "프로 운동선수",
+      "type": "career",
+      "grade": "A",
+      "linked_facility": "knights",
+      "mandatory": {
+        "stats": {
+          "VIT": 80,
+          "WIL": 70
+        },
+        "ear_min": 55,
+        "education": [
+          {
+            "facility": "knights",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J29_P2",
+          "J29_P3A"
+        ],
+        "events": [
+          "E_J29_SEED",
+          "E_J29_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 300,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 프로 운동선수(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J30",
+      "name": "세계적인 스포츠 스타",
+      "type": "career",
+      "grade": "S",
+      "linked_facility": "knights",
+      "mandatory": {
+        "stats": {
+          "VIT": 90,
+          "WIL": 75
+        },
+        "ear_min": 65,
+        "education": [
+          {
+            "facility": "knights",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J30_P2",
+          "J30_P3A",
+          "J30_P3B",
+          "J30_M"
+        ],
+        "events": [
+          "E_J30_SEED",
+          "E_J30_STAGE",
+          "E_J30_BRIDGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 400,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 세계적인 스포츠 스타(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J31",
+      "name": "영상 편집자",
+      "type": "career",
+      "grade": "C",
+      "linked_facility": "tower",
+      "mandatory": {
+        "stats": {
+          "SKL": 55,
+          "SEN": 50
+        },
+        "ear_min": 35,
+        "education": [
+          {
+            "facility": "tower",
+            "stage": "intro",
+            "count": 6
+          }
+        ],
+        "projects": [
+          "J31_P1"
+        ],
+        "events": [
+          "E_J31_SEED"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 100,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 영상 편집자(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J32",
+      "name": "소프트웨어 개발자",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "workshop",
+      "mandatory": {
+        "stats": {
+          "SKL": 70,
+          "INT": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "workshop",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "tower",
+            "stage": "advanced",
+            "count": 8
+          }
+        ],
+        "projects": [
+          "J32_P2"
+        ],
+        "events": [
+          "E_J32_SEED",
+          "E_J32_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 소프트웨어 개발자(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J33",
+      "name": "데이터 사이언티스트",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "academy",
+      "mandatory": {
+        "stats": {
+          "INT": 70,
+          "SKL": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "tower",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J33_P2"
+        ],
+        "events": [
+          "E_J33_SEED",
+          "E_J33_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 데이터 사이언티스트(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J34",
+      "name": "방송 프로듀서",
+      "type": "career",
+      "grade": "A",
+      "linked_facility": "tower",
+      "mandatory": {
+        "stats": {
+          "SKL": 80,
+          "SEN": 70
+        },
+        "ear_min": 55,
+        "education": [
+          {
+            "facility": "tower",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J34_P2",
+          "J34_P3A"
+        ],
+        "events": [
+          "E_J34_SEED",
+          "E_J34_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 300,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 방송 프로듀서(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J35",
+      "name": "글로벌 IT 창업가",
+      "type": "career",
+      "grade": "S",
+      "linked_facility": "workshop",
+      "mandatory": {
+        "stats": {
+          "SKL": 90,
+          "INT": 75
+        },
+        "ear_min": 65,
+        "education": [
+          {
+            "facility": "workshop",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "guild",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J35_P2",
+          "J35_P3A",
+          "J35_P3B",
+          "J35_M"
+        ],
+        "events": [
+          "E_J35_SEED",
+          "E_J35_STAGE",
+          "E_J35_BRIDGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 400,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 글로벌 IT 창업가(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J36",
+      "name": "바리스타",
+      "type": "career",
+      "grade": "C",
+      "linked_facility": "guild",
+      "mandatory": {
+        "stats": {
+          "SKL": 55,
+          "SOC": 50
+        },
+        "ear_min": 35,
+        "education": [
+          {
+            "facility": "guild",
+            "stage": "intro",
+            "count": 6
+          }
+        ],
+        "projects": [
+          "J36_P1"
+        ],
+        "events": [
+          "E_J36_SEED"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 100,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 바리스타(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J37",
+      "name": "호텔리어",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "guild",
+      "mandatory": {
+        "stats": {
+          "SOC": 70,
+          "CHA": 60
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "guild",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J37_P2"
+        ],
+        "events": [
+          "E_J37_SEED",
+          "E_J37_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 호텔리어(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J38",
+      "name": "셰프",
+      "type": "career",
+      "grade": "B",
+      "linked_facility": "guild",
+      "mandatory": {
+        "stats": {
+          "SKL": 70,
+          "SEN": 65
+        },
+        "ear_min": 45,
+        "education": [
+          {
+            "facility": "guild",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J38_P2"
+        ],
+        "events": [
+          "E_J38_SEED",
+          "E_J38_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 200,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 셰프(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J39",
+      "name": "레스토랑 경영자",
+      "type": "career",
+      "grade": "A",
+      "linked_facility": "guild",
+      "mandatory": {
+        "stats": {
+          "SOC": 80,
+          "SKL": 70
+        },
+        "ear_min": 55,
+        "education": [
+          {
+            "facility": "guild",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J39_P2",
+          "J39_P3A"
+        ],
+        "events": [
+          "E_J39_SEED",
+          "E_J39_STAGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 300,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 레스토랑 경영자(으)로 성장한다."
+      }
+    },
+    {
+      "id": "J40",
+      "name": "대기업 CEO",
+      "type": "career",
+      "grade": "S",
+      "linked_facility": "guild",
+      "mandatory": {
+        "stats": {
+          "SOC": 90,
+          "INT": 75
+        },
+        "ear_min": 65,
+        "education": [
+          {
+            "facility": "guild",
+            "stage": "professional",
+            "count": 10
+          },
+          {
+            "facility": "academy",
+            "stage": "professional",
+            "count": 10
+          }
+        ],
+        "projects": [
+          "J40_P2",
+          "J40_P3A",
+          "J40_P3B",
+          "J40_M"
+        ],
+        "events": [
+          "E_J40_SEED",
+          "E_J40_STAGE",
+          "E_J40_BRIDGE"
+        ],
+        "counters": {},
+        "relation_min": 0
+      },
+      "priority": {
+        "base": 400,
+        "career_confidence_weight": 1,
+        "ear_weight": 0.15,
+        "happiness_weight": 0.1
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세에 지구로 이동한 후 추가 교육과 사회 경험을 거쳐 대기업 CEO(으)로 성장한다."
+      }
+    },
+    {
+      "id": "S01",
+      "name": "헬창게이",
+      "type": "special",
+      "grade": "SPECIAL",
+      "mandatory": {
+        "stats": {
+          "VIT": 82,
+          "WIL": 64
+        },
+        "ear_min": 55,
+        "education": [],
+        "projects": [],
+        "events": [
+          "E_S01_FOUND",
+          "E_S01_VISION"
+        ],
+        "counters": {
+          "fitness": 16
+        },
+        "relation_min": 0,
+        "value_min": {
+          "discipline": 55
+        },
+        "autonomy_min": 0
+      },
+      "priority": {
+        "base": 350,
+        "career_confidence_weight": 0,
+        "ear_weight": 0.12,
+        "happiness_weight": 0.25,
+        "special_focus_bonus": 100
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세 이후 지구에서 형성되는 성인기의 미래 모습. 청소년 시기에는 성인 전용 활동이 발생하지 않음."
+      }
+    },
+    {
+      "id": "S02",
+      "name": "클럽 죽돌이",
+      "type": "special",
+      "grade": "SPECIAL",
+      "mandatory": {
+        "stats": {
+          "SEN": 70,
+          "SOC": 73
+        },
+        "ear_min": 50,
+        "education": [],
+        "projects": [],
+        "events": [
+          "E_S02_FOUND",
+          "E_S02_VISION"
+        ],
+        "counters": {
+          "dance": 6,
+          "music": 6
+        },
+        "relation_min": 0,
+        "value_min": {
+          "expression": 55
+        },
+        "autonomy_min": 0
+      },
+      "priority": {
+        "base": 350,
+        "career_confidence_weight": 0,
+        "ear_weight": 0.12,
+        "happiness_weight": 0.25,
+        "special_focus_bonus": 100
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세 이후 지구에서 형성되는 성인기의 미래 모습. 청소년 시기에는 성인 전용 활동이 발생하지 않음."
+      }
+    },
+    {
+      "id": "S03",
+      "name": "전설의 모임장",
+      "type": "special",
+      "grade": "SPECIAL",
+      "mandatory": {
+        "stats": {
+          "SOC": 83,
+          "WIL": 68
+        },
+        "ear_min": 55,
+        "education": [],
+        "projects": [],
+        "events": [
+          "E_S03_FOUND",
+          "E_S03_VISION"
+        ],
+        "counters": {
+          "community": 7,
+          "leadership": 7
+        },
+        "relation_min": 65,
+        "value_min": {
+          "leadership": 60
+        },
+        "autonomy_min": 0
+      },
+      "priority": {
+        "base": 350,
+        "career_confidence_weight": 0,
+        "ear_weight": 0.12,
+        "happiness_weight": 0.25,
+        "special_focus_bonus": 100
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세 이후 지구에서 형성되는 성인기의 미래 모습. 청소년 시기에는 성인 전용 활동이 발생하지 않음."
+      },
+      "social_mandatory": {
+        "strong_bonds": 2,
+        "flags": []
+      }
+    },
+    {
+      "id": "S04",
+      "name": "연애 마스터",
+      "type": "special",
+      "grade": "SPECIAL",
+      "mandatory": {
+        "stats": {
+          "SEN": 75,
+          "SOC": 77
+        },
+        "ear_min": 55,
+        "education": [],
+        "projects": [],
+        "events": [
+          "E_S04_FOUND",
+          "E_S04_VISION"
+        ],
+        "counters": {
+          "friendship": 5,
+          "romance": 5
+        },
+        "relation_min": 65,
+        "value_min": {
+          "empathy": 60
+        },
+        "autonomy_min": 0
+      },
+      "priority": {
+        "base": 350,
+        "career_confidence_weight": 0,
+        "ear_weight": 0.12,
+        "happiness_weight": 0.25,
+        "special_focus_bonus": 100
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세 이후 지구에서 형성되는 성인기의 미래 모습. 청소년 시기에는 성인 전용 활동이 발생하지 않음."
+      },
+      "social_mandatory": {
+        "strong_bonds": 1,
+        "flags": [
+          "respectful_dialogue"
+        ]
+      }
+    },
+    {
+      "id": "S05",
+      "name": "SNS 셀럽",
+      "type": "special",
+      "grade": "SPECIAL",
+      "mandatory": {
+        "stats": {
+          "CHA": 80,
+          "SKL": 70
+        },
+        "ear_min": 55,
+        "education": [],
+        "projects": [],
+        "events": [
+          "E_S05_FOUND",
+          "E_S05_VISION"
+        ],
+        "counters": {
+          "digital": 6,
+          "creative": 6
+        },
+        "relation_min": 0,
+        "value_min": {
+          "visibility": 55
+        },
+        "autonomy_min": 0
+      },
+      "priority": {
+        "base": 350,
+        "career_confidence_weight": 0,
+        "ear_weight": 0.12,
+        "happiness_weight": 0.25,
+        "special_focus_bonus": 100
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세 이후 지구에서 형성되는 성인기의 미래 모습. 청소년 시기에는 성인 전용 활동이 발생하지 않음."
+      }
+    },
+    {
+      "id": "S06",
+      "name": "자유로운 백수",
+      "type": "special",
+      "grade": "SPECIAL",
+      "mandatory": {
+        "stats": {
+          "WIL": 67,
+          "SEN": 62
+        },
+        "ear_min": 65,
+        "education": [],
+        "projects": [],
+        "events": [
+          "E_S06_FOUND",
+          "E_S06_VISION"
+        ],
+        "counters": {
+          "independence": 5,
+          "creative": 5
+        },
+        "relation_min": 0,
+        "value_min": {
+          "independence": 55
+        },
+        "autonomy_min": 55
+      },
+      "priority": {
+        "base": 350,
+        "career_confidence_weight": 0,
+        "ear_weight": 0.12,
+        "happiness_weight": 0.25,
+        "special_focus_bonus": 100
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세 이후 지구에서 형성되는 성인기의 미래 모습. 청소년 시기에는 성인 전용 활동이 발생하지 않음."
+      }
+    },
+    {
+      "id": "S07",
+      "name": "이태원 밤의 황제",
+      "type": "special",
+      "grade": "SPECIAL",
+      "mandatory": {
+        "stats": {
+          "CHA": 84,
+          "SOC": 86
+        },
+        "ear_min": 65,
+        "education": [],
+        "projects": [],
+        "events": [
+          "E_S07_FOUND",
+          "E_S07_VISION"
+        ],
+        "counters": {
+          "dance": 5,
+          "community": 5,
+          "leadership": 5
+        },
+        "relation_min": 70,
+        "value_min": {
+          "leadership": 60
+        },
+        "autonomy_min": 0
+      },
+      "priority": {
+        "base": 350,
+        "career_confidence_weight": 0,
+        "ear_weight": 0.12,
+        "happiness_weight": 0.25,
+        "special_focus_bonus": 100
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세 이후 지구에서 형성되는 성인기의 미래 모습. 청소년 시기에는 성인 전용 활동이 발생하지 않음."
+      },
+      "social_mandatory": {
+        "strong_bonds": 2,
+        "flags": [
+          "shared_community"
+        ]
+      }
+    },
+    {
+      "id": "S08",
+      "name": "세계의 방랑자",
+      "type": "special",
+      "grade": "SPECIAL",
+      "mandatory": {
+        "stats": {
+          "VIT": 70,
+          "SEN": 76
+        },
+        "ear_min": 70,
+        "education": [],
+        "projects": [],
+        "events": [
+          "E_S08_FOUND",
+          "E_S08_VISION"
+        ],
+        "counters": {
+          "travel": 6,
+          "independence": 6
+        },
+        "relation_min": 0,
+        "value_min": {
+          "exploration": 55
+        },
+        "autonomy_min": 0
+      },
+      "priority": {
+        "base": 350,
+        "career_confidence_weight": 0,
+        "ear_weight": 0.12,
+        "happiness_weight": 0.25,
+        "special_focus_bonus": 100
+      },
+      "earth_future": {
+        "qualification_required": false,
+        "description": "20세 이후 지구에서 형성되는 성인기의 미래 모습. 청소년 시기에는 성인 전용 활동이 발생하지 않음."
+      }
+    }
+  ]
+}

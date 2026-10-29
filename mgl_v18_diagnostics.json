@@ -1,0 +1,37 @@
+{
+  "unresolved_count": 22,
+  "unresolved_ids": [
+    "J04",
+    "J05",
+    "J09",
+    "J10",
+    "J14",
+    "J15",
+    "J19",
+    "J20",
+    "J24",
+    "J25",
+    "J29",
+    "J30",
+    "J34",
+    "J35",
+    "J39",
+    "J40",
+    "S01",
+    "S03",
+    "S04",
+    "S05",
+    "S07",
+    "S08"
+  ],
+  "failures_unresolved": {
+    "stat": 237,
+    "course": 156,
+    "project": 335,
+    "event": 260,
+    "ear": 52,
+    "counter": 47,
+    "value": 19,
+    "life_flag": 11
+  }
+}

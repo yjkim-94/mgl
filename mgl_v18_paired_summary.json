@@ -1,0 +1,22 @@
+{
+  "v17": {
+    "runs": 48,
+    "eligible": 26,
+    "selected_match": 26,
+    "rests": 15342,
+    "courses": 1360,
+    "bonds": 1633,
+    "mean_stat": 46.107,
+    "earth_violations": 0
+  },
+  "v18": {
+    "runs": 48,
+    "eligible": 26,
+    "selected_match": 26,
+    "rests": 1202,
+    "courses": 7893,
+    "bonds": 1667,
+    "mean_stat": 74.222,
+    "earth_violations": 0
+  }
+}

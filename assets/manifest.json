@@ -1,0 +1,67 @@
+{
+  "version": "1.9.2-phase1",
+  "art_style": "Japanese anime visual novel",
+  "status": "concept-only; not final character canon",
+  "assets": [
+    {
+      "id": "concept_visual_board",
+      "path": "assets/concept/mgl_visual_direction_board_v1.png",
+      "type": "concept",
+      "integrated": false,
+      "note": "Visual direction only. Text and NPC names in generated image are not canonical."
+    }
+  ],
+  "planned": [
+    {
+      "id": "npc_rian_base",
+      "type": "sprite",
+      "status": "pending",
+      "canonical_name": "리안"
+    },
+    {
+      "id": "npc_edwin_base",
+      "type": "sprite",
+      "status": "pending",
+      "canonical_name": "에드윈"
+    },
+    {
+      "id": "npc_sion_base",
+      "type": "sprite",
+      "status": "pending",
+      "canonical_name": "시온"
+    },
+    {
+      "id": "npc_eden_base",
+      "type": "sprite",
+      "status": "pending",
+      "canonical_name": "이든"
+    },
+    {
+      "id": "npc_kail_base",
+      "type": "sprite",
+      "status": "pending",
+      "canonical_name": "카일"
+    },
+    {
+      "id": "npc_noah_base",
+      "type": "sprite",
+      "status": "pending",
+      "canonical_name": "노아"
+    },
+    {
+      "id": "protagonist_age_10",
+      "type": "sprite",
+      "status": "pending"
+    },
+    {
+      "id": "protagonist_age_15",
+      "type": "sprite",
+      "status": "pending"
+    },
+    {
+      "id": "protagonist_age_20",
+      "type": "sprite",
+      "status": "pending"
+    }
+  ]
+}

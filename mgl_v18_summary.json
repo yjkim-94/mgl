@@ -1,0 +1,84 @@
+{
+  "runs": 336,
+  "months": 40320,
+  "actions": 160332,
+  "rejected": 0,
+  "eligible_runs": 52,
+  "reachable_endings": 26,
+  "total_endings": 48,
+  "by_policy": {
+    "guided": {
+      "eligible": 26,
+      "mean_stat": 74.22,
+      "rests": 1202
+    },
+    "free_random": {
+      "eligible": 5,
+      "mean_stat": 69.91,
+      "rests": 467
+    },
+    "balanced": {
+      "eligible": 4,
+      "mean_stat": 69.73,
+      "rests": 484
+    },
+    "social": {
+      "eligible": 0,
+      "mean_stat": 38.24,
+      "rests": 49
+    },
+    "frugal": {
+      "eligible": 5,
+      "mean_stat": 66.38,
+      "rests": 2500
+    },
+    "mixed": {
+      "eligible": 4,
+      "mean_stat": 59.31,
+      "rests": 132
+    },
+    "career": {
+      "eligible": 8,
+      "mean_stat": 69.46,
+      "rests": 706
+    }
+  },
+  "failures_by_type": {
+    "course": 287,
+    "project": 454,
+    "event": 413,
+    "stat": 318,
+    "ear": 78,
+    "counter": 61,
+    "value": 22,
+    "life_flag": 11
+  },
+  "reachable_ids": [
+    "J01",
+    "J02",
+    "J03",
+    "J06",
+    "J07",
+    "J08",
+    "J11",
+    "J12",
+    "J13",
+    "J16",
+    "J17",
+    "J18",
+    "J21",
+    "J22",
+    "J23",
+    "J26",
+    "J27",
+    "J28",
+    "J31",
+    "J32",
+    "J33",
+    "J36",
+    "J37",
+    "J38",
+    "S02",
+    "S06"
+  ]
+}

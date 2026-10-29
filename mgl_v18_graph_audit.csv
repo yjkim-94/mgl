@@ -1,0 +1,23 @@
+﻿ending,name,node_count,earliest_node_age,ordered_nodes,education_max,stat_max,node_ap_total,node_cost_total
+J04,약사,5,18,E_J04_SEED;J04_P1;J04_P2;E_J04_STAGE;J04_P3A,"{""healing:intro"": 6, ""healing:professional"": 10, ""workshop:advanced"": 8}","{""INT"": 80, ""SKL"": 70}",11,360
+J05,의사,8,18,E_J05_SEED;J05_P1;J05_P2;E_J05_STAGE;J05_P3A;E_J05_BRIDGE;J05_P3B;J05_M,"{""academy:professional"": 10, ""healing:intro"": 6, ""healing:professional"": 10}","{""INT"": 90, ""WIL"": 75}",20,810
+J09,대학 교수,8,18,E_J09_SEED;J09_P1;J09_P2;E_J09_STAGE;J09_P3A;E_J09_BRIDGE;J09_P3B;J09_M,"{""academy:intro"": 6, ""academy:professional"": 10}","{""INT"": 90, ""WIL"": 75}",20,810
+J10,학술 저술가,5,18,E_J10_SEED;J10_P1;J10_P2;E_J10_STAGE;J10_P3A,"{""academy:intro"": 6, ""academy:professional"": 10, ""tower:advanced"": 8}","{""INT"": 80, ""SEN"": 70}",11,360
+J14,공인회계사,5,18,E_J14_SEED;J14_P1;J14_P2;E_J14_STAGE;J14_P3A,"{""academy:professional"": 10, ""guild:intro"": 6, ""guild:professional"": 10}","{""INT"": 80, ""SKL"": 70}",11,360
+J15,변호사,8,18,E_J15_SEED;J15_P1;J15_P2;E_J15_STAGE;J15_P3A;E_J15_BRIDGE;J15_P3B;J15_M,"{""academy:intro"": 6, ""academy:professional"": 10}","{""INT"": 90, ""SOC"": 75}",20,810
+J19,가수,5,18,E_J19_SEED;J19_P1;J19_P2;E_J19_STAGE;J19_P3A,"{""theater:intro"": 6, ""theater:professional"": 10}","{""SEN"": 80, ""CHA"": 70}",11,360
+J20,유명 배우,8,18,E_J20_SEED;J20_P1;J20_P2;E_J20_STAGE;J20_P3A;E_J20_BRIDGE;J20_P3B;J20_M,"{""theater:intro"": 6, ""theater:professional"": 10}","{""CHA"": 90, ""SEN"": 75}",20,810
+J24,패션 디자이너,5,18,E_J24_SEED;J24_P1;J24_P2;E_J24_STAGE;J24_P3A,"{""beauty:intro"": 6, ""beauty:professional"": 10}","{""SEN"": 80, ""SKL"": 70}",11,360
+J25,톱모델,8,18,E_J25_SEED;J25_P1;J25_P2;E_J25_STAGE;J25_P3A;E_J25_BRIDGE;J25_P3B;J25_M,"{""beauty:intro"": 6, ""beauty:professional"": 10, ""theater:professional"": 10}","{""CHA"": 90, ""WIL"": 75}",20,810
+J29,프로 운동선수,5,18,E_J29_SEED;J29_P1;J29_P2;E_J29_STAGE;J29_P3A,"{""knights:intro"": 6, ""knights:professional"": 10}","{""VIT"": 80, ""WIL"": 70}",11,360
+J30,세계적인 스포츠 스타,8,18,E_J30_SEED;J30_P1;J30_P2;E_J30_STAGE;J30_P3A;E_J30_BRIDGE;J30_P3B;J30_M,"{""knights:intro"": 6, ""knights:professional"": 10}","{""VIT"": 90, ""WIL"": 75}",20,810
+J34,방송 프로듀서,5,18,E_J34_SEED;J34_P1;J34_P2;E_J34_STAGE;J34_P3A,"{""tower:intro"": 6, ""tower:professional"": 10}","{""SKL"": 80, ""SEN"": 70}",11,360
+J35,글로벌 IT 창업가,8,18,E_J35_SEED;J35_P1;J35_P2;E_J35_STAGE;J35_P3A;E_J35_BRIDGE;J35_P3B;J35_M,"{""guild:professional"": 10, ""workshop:intro"": 6, ""workshop:professional"": 10}","{""SKL"": 90, ""INT"": 75}",20,810
+J39,레스토랑 경영자,5,18,E_J39_SEED;J39_P1;J39_P2;E_J39_STAGE;J39_P3A,"{""guild:intro"": 6, ""guild:professional"": 10}","{""SOC"": 80, ""SKL"": 70}",11,360
+J40,대기업 CEO,8,18,E_J40_SEED;J40_P1;J40_P2;E_J40_STAGE;J40_P3A;E_J40_BRIDGE;J40_P3B;J40_M,"{""academy:professional"": 10, ""guild:intro"": 6, ""guild:professional"": 10}","{""SOC"": 90, ""INT"": 75}",20,810
+S01,헬창게이,2,18,E_S01_FOUND;E_S01_VISION,{},"{""VIT"": 82, ""WIL"": 64}",2,0
+S03,전설의 모임장,2,18,E_S03_FOUND;E_S03_VISION,{},"{""SOC"": 83, ""WIL"": 68}",2,0
+S04,연애 마스터,2,18,E_S04_FOUND;E_S04_VISION,{},"{""SEN"": 75, ""SOC"": 77}",2,0
+S05,SNS 셀럽,2,18,E_S05_FOUND;E_S05_VISION,{},"{""CHA"": 80, ""SKL"": 70}",2,0
+S07,이태원 밤의 황제,2,18,E_S07_FOUND;E_S07_VISION,{},"{""CHA"": 84, ""SOC"": 86}",2,0
+S08,세계의 방랑자,2,18,E_S08_FOUND;E_S08_VISION,{},"{""VIT"": 70, ""SEN"": 76}",2,0

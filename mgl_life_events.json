@@ -1,0 +1,2863 @@
+{
+  "schema_version": "1.1",
+  "season_month_mapping": "0=1월 ... 11=12월",
+  "events": [
+    {
+      "id": "L_SEASON_SPRING_1",
+      "title": "별빛 개학제",
+      "description": "별빛 개학제에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        2,
+        3,
+        4
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 10,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "expression": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "expression": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_SPRING_2",
+      "title": "봄의 마을 청소",
+      "description": "봄의 마을 청소에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        2,
+        3,
+        4
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 11,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "empathy": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "empathy": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_SPRING_3",
+      "title": "새싹 나눔 장터",
+      "description": "새싹 나눔 장터에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        2,
+        3,
+        4
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 12,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "independence": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "independence": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_SUMMER_1",
+      "title": "여름 기술 박람회",
+      "description": "여름 기술 박람회에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        5,
+        6,
+        7
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 10,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "expression": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "expression": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_SUMMER_2",
+      "title": "호수 안전 교육",
+      "description": "호수 안전 교육에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        5,
+        6,
+        7
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 11,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "empathy": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "empathy": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_SUMMER_3",
+      "title": "여름 친구 축제",
+      "description": "여름 친구 축제에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        5,
+        6,
+        7
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 12,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "independence": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "independence": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_AUTUMN_1",
+      "title": "가을 문화제",
+      "description": "가을 문화제에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 10,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "expression": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "expression": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_AUTUMN_2",
+      "title": "추수 감사 도움",
+      "description": "추수 감사 도움에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 11,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "empathy": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "empathy": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_AUTUMN_3",
+      "title": "가을 진로 발표회",
+      "description": "가을 진로 발표회에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 12,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "independence": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "independence": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_WINTER_1",
+      "title": "겨울 독서 모임",
+      "description": "겨울 독서 모임에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        11,
+        0,
+        1
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 10,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "expression": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "expression": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_WINTER_2",
+      "title": "한파 대비 이웃 돌봄",
+      "description": "한파 대비 이웃 돌봄에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        11,
+        0,
+        1
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 11,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "empathy": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "empathy": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_SEASON_WINTER_3",
+      "title": "연말 가족 회고",
+      "description": "연말 가족 회고에 참여한다. 안전하게 다양한 사람과 경험을 만나거나 혼자 쉬어 갈 수 있다.",
+      "age_min": 10,
+      "age_max": 19,
+      "months": [
+        11,
+        0,
+        1
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "yearly",
+      "priority": 12,
+      "options": [
+        {
+          "id": "participate",
+          "text": "시간을 내어 정성껏 참여한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "happiness": 3,
+            "stress": 4,
+            "values": {
+              "independence": 2
+            },
+            "trust": 1,
+            "relation": 1,
+            "stat_growth": {
+              "SOC": 0.45
+            }
+          }
+        },
+        {
+          "id": "economize",
+          "text": "소박하고 실속 있게 함께한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 1,
+            "stress": 1,
+            "values": {
+              "independence": 1
+            },
+            "autonomy": 1,
+            "relation": 0.6
+          }
+        },
+        {
+          "id": "rest",
+          "text": "이번에는 정중히 양해를 구하고 쉰다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "stress": -8,
+            "autonomy": 1,
+            "relation": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_HOME_10",
+      "title": "첫해의 약속",
+      "description": "새로운 집에서 어떤 하루를 만들고 싶은지 보호자와 이야기한다.",
+      "age_min": 10,
+      "age_max": 10,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 90,
+      "options": [
+        {
+          "id": "talk",
+          "text": "솔직하게 마음을 나눈다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "trust": 4,
+            "happiness": 3,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "open_dialogue"
+            ]
+          }
+        },
+        {
+          "id": "plan",
+          "text": "함께 학습 계획을 세운다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "confidence": 2,
+            "autonomy": 1,
+            "values": {
+              "discipline": 2
+            },
+            "flags": [
+              "structured_home"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_HOME_12",
+      "title": "작은 실패를 인정하기",
+      "description": "실수 이후 책임과 회복을 어떻게 배울지 결정한다.",
+      "age_min": 12,
+      "age_max": 13,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 90,
+      "options": [
+        {
+          "id": "own",
+          "text": "실수를 인정하고 다시 시도한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "trust": 3,
+            "confidence": 2,
+            "values": {
+              "independence": 2
+            },
+            "flags": [
+              "accountability"
+            ]
+          }
+        },
+        {
+          "id": "hide",
+          "text": "잠시 혼자 해결하려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "stress": 4,
+            "autonomy": 1,
+            "trust": -3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_CHOICE_14",
+      "title": "서로의 경계 존중",
+      "description": "친구나 첫사랑과 서로 원하는 거리와 속도를 대화한다.",
+      "age_min": 14,
+      "age_max": 16,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 90,
+      "options": [
+        {
+          "id": "respect",
+          "text": "각자의 마음과 경계를 존중해 이야기한다",
+          "ap": 2,
+          "cost": 0,
+          "effects": {
+            "trust": 3,
+            "values": {
+              "empathy": 4
+            },
+            "relation": 3,
+            "flags": [
+              "respectful_dialogue"
+            ]
+          }
+        },
+        {
+          "id": "avoid",
+          "text": "당분간 나만의 시간을 갖는다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "autonomy": 2,
+            "happiness": 1
+          }
+        },
+        {
+          "id": "push",
+          "text": "상대의 반응을 기다리지 않고 내 생각만 고집한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "confidence": 1,
+            "trust": -4,
+            "relation": -5,
+            "stress": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_LEAD_15",
+      "title": "함께 세우는 동아리",
+      "description": "친구들의 의견을 모아 작은 공동체 활동을 만든다.",
+      "age_min": 15,
+      "age_max": 18,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 90,
+      "options": [
+        {
+          "id": "share",
+          "text": "역할과 책임을 나누며 운영한다",
+          "ap": 2,
+          "cost": 30,
+          "effects": {
+            "values": {
+              "leadership": 4,
+              "empathy": 2
+            },
+            "relation": 4,
+            "confidence": 2,
+            "flags": [
+              "shared_community"
+            ]
+          }
+        },
+        {
+          "id": "solo",
+          "text": "혼자 기획과 진행을 맡는다",
+          "ap": 2,
+          "cost": 0,
+          "effects": {
+            "values": {
+              "leadership": 2
+            },
+            "stress": 7,
+            "confidence": 2
+          }
+        },
+        {
+          "id": "skip",
+          "text": "잠시 다른 진로에 집중한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "autonomy": 2,
+            "stress": -3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_CAREER_16",
+      "title": "첫 진로 상담",
+      "description": "이세계의 훈련을 지구의 일과 연결할 방법을 찾는다.",
+      "age_min": 16,
+      "age_max": 17,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 90,
+      "options": [
+        {
+          "id": "research",
+          "text": "지구의 교육·자격 요건을 함께 조사한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "ear": 6,
+            "confidence": 3,
+            "values": {
+              "independence": 2
+            },
+            "flags": [
+              "qualification_plan"
+            ]
+          }
+        },
+        {
+          "id": "practice",
+          "text": "아스텔리아의 현장 실습을 우선한다",
+          "ap": 2,
+          "cost": 15,
+          "effects": {
+            "confidence": 3,
+            "stat_growth": {
+              "SKL": 1.0
+            },
+            "stress": 3
+          }
+        },
+        {
+          "id": "postpone",
+          "text": "지금은 진로 결정을 미룬다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 2,
+            "confidence": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_CHALLENGE_17",
+      "title": "다른 선택의 무게",
+      "description": "공동 프로젝트에서 의견 충돌이 생겼다.",
+      "age_min": 17,
+      "age_max": 18,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 90,
+      "options": [
+        {
+          "id": "mediate",
+          "text": "양쪽을 듣고 합의안을 제시한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "relation": 3,
+            "trust": 3,
+            "values": {
+              "empathy": 3
+            }
+          },
+          "check": {
+            "stat": "SOC",
+            "target": 57
+          },
+          "on_success": {
+            "confidence": 3,
+            "flags": [
+              "mediated_conflict"
+            ]
+          },
+          "on_failure": {
+            "stress": 5,
+            "happiness": -1
+          }
+        },
+        {
+          "id": "listen",
+          "text": "충분히 듣고 대화를 다음으로 미룬다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "trust": 2,
+            "values": {
+              "empathy": 2
+            },
+            "stress": -2
+          }
+        },
+        {
+          "id": "refuse",
+          "text": "논의에서 물러난다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "autonomy": 1,
+            "relation": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_EARTH_18",
+      "title": "지구 생활 예행연습",
+      "description": "돈, 주거, 교육, 취업을 현실적으로 계획한다.",
+      "age_min": 18,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 90,
+      "options": [
+        {
+          "id": "prepare",
+          "text": "모의 예산을 세우고 제도를 찾아본다",
+          "ap": 2,
+          "cost": 25,
+          "effects": {
+            "ear": 8,
+            "autonomy": 3,
+            "confidence": 3,
+            "flags": [
+              "earth_budget"
+            ]
+          }
+        },
+        {
+          "id": "ask",
+          "text": "보호자와 함께 생활 계획을 검토한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "ear": 4,
+            "trust": 3,
+            "separation": 3
+          }
+        },
+        {
+          "id": "ignore",
+          "text": "불안을 달래기 위해 잠시 쉬어 간다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "happiness": 3,
+            "stress": -8
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_FAREWELL_19",
+      "title": "떠나는 날을 준비하는 대화",
+      "description": "20세의 이별은 피할 수 없다. 마음과 현실 준비를 어떻게 마무리할지 선택한다.",
+      "age_min": 19,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": null,
+      "requires": {},
+      "frequency": "lifetime",
+      "priority": 90,
+      "options": [
+        {
+          "id": "remember",
+          "text": "소중한 시간을 기록하고 작별을 준비한다",
+          "ap": 2,
+          "cost": 25,
+          "effects": {
+            "ear": 5,
+            "separation": 7,
+            "trust": 4,
+            "happiness": 2,
+            "flags": [
+              "farewell_memory"
+            ]
+          }
+        },
+        {
+          "id": "independent",
+          "text": "혼자 생활할 계획을 세밀하게 정리한다",
+          "ap": 2,
+          "cost": 0,
+          "effects": {
+            "ear": 7,
+            "autonomy": 4,
+            "stress": 3,
+            "flags": [
+              "farewell_plan"
+            ]
+          }
+        },
+        {
+          "id": "quiet",
+          "text": "마음을 가다듬고 조용히 하루를 보낸다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "stress": -7,
+            "happiness": 2,
+            "separation": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_RIAN_1",
+      "title": "리안: 도서관의 공동 연구",
+      "description": "친구와 자료를 읽고 실험 결과를 비교한다",
+      "age_min": 11,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "rian",
+      "requires": {
+        "npc_affinity": 27,
+        "npc_trust": 22
+      },
+      "frequency": "lifetime",
+      "priority": 75,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_rian_1"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_rian_1"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_RIAN_2",
+      "title": "리안: 지식과 배려의 토론",
+      "description": "의견이 다를 때 근거와 감정을 함께 살핀다",
+      "age_min": 14,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "rian",
+      "requires": {
+        "npc_affinity": 46,
+        "npc_trust": 38,
+        "flags": [
+          "arc_rian_1"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 76,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_rian_2"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_rian_2"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_RIAN_3",
+      "title": "리안: 서로 다른 미래를 위한 응원",
+      "description": "지구에 가기 전 지식과 편지를 나눈다",
+      "age_min": 17,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "rian",
+      "requires": {
+        "npc_affinity": 62,
+        "npc_trust": 53,
+        "flags": [
+          "arc_rian_2"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 77,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_rian_3"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_rian_3"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_EDWIN_1",
+      "title": "에드윈: 치유의 신전 봉사",
+      "description": "안전한 봉사 활동에서 환자를 배려한다",
+      "age_min": 11,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "edwin",
+      "requires": {
+        "npc_affinity": 27,
+        "npc_trust": 22
+      },
+      "frequency": "lifetime",
+      "priority": 75,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_edwin_1"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_edwin_1"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_EDWIN_2",
+      "title": "에드윈: 도움의 한계와 책임",
+      "description": "무리하지 않는 도움의 방식을 고민한다",
+      "age_min": 14,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "edwin",
+      "requires": {
+        "npc_affinity": 46,
+        "npc_trust": 38,
+        "flags": [
+          "arc_edwin_1"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 76,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_edwin_2"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_edwin_2"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_EDWIN_3",
+      "title": "에드윈: 그리움과 돌봄의 기억",
+      "description": "떠날 사람을 서로 응원하며 마지막 봉사를 한다",
+      "age_min": 17,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "edwin",
+      "requires": {
+        "npc_affinity": 62,
+        "npc_trust": 53,
+        "flags": [
+          "arc_edwin_2"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 77,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_edwin_3"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_edwin_3"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_SION_1",
+      "title": "시온: 작은 장치 제작",
+      "description": "친구와 마도 장치를 함께 조립한다",
+      "age_min": 11,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "sion",
+      "requires": {
+        "npc_affinity": 27,
+        "npc_trust": 22
+      },
+      "frequency": "lifetime",
+      "priority": 75,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_sion_1"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_sion_1"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_SION_2",
+      "title": "시온: 시험 실패 후 재설계",
+      "description": "실패의 책임과 다음 실험을 논의한다",
+      "age_min": 14,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "sion",
+      "requires": {
+        "npc_affinity": 46,
+        "npc_trust": 38,
+        "flags": [
+          "arc_sion_1"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 76,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_sion_2"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_sion_2"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_SION_3",
+      "title": "시온: 남기는 설계도",
+      "description": "지구에서는 사용할 수 없는 기술의 원리를 기록한다",
+      "age_min": 17,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "sion",
+      "requires": {
+        "npc_affinity": 62,
+        "npc_trust": 53,
+        "flags": [
+          "arc_sion_2"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 77,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_sion_3"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_sion_3"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_EDEN_1",
+      "title": "이든: 합동 공연 연습",
+      "description": "예술 공연을 함께 연습한다",
+      "age_min": 11,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "eden",
+      "requires": {
+        "npc_affinity": 27,
+        "npc_trust": 22
+      },
+      "frequency": "lifetime",
+      "priority": 75,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_eden_1"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_eden_1"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_EDEN_2",
+      "title": "이든: 무대 위의 배려",
+      "description": "무대 배역을 두고 의견 충돌을 해결한다",
+      "age_min": 14,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "eden",
+      "requires": {
+        "npc_affinity": 46,
+        "npc_trust": 38,
+        "flags": [
+          "arc_eden_1"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 76,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_eden_2"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_eden_2"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_EDEN_3",
+      "title": "이든: 마지막 무대의 약속",
+      "description": "서로가 자기 자리에서 빛나길 응원한다",
+      "age_min": 17,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "eden",
+      "requires": {
+        "npc_affinity": 62,
+        "npc_trust": 53,
+        "flags": [
+          "arc_eden_2"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 77,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_eden_3"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_eden_3"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_KAIL_1",
+      "title": "카일: 운동장 협동 훈련",
+      "description": "친구와 각자 체력에 맞는 훈련을 한다",
+      "age_min": 11,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "kail",
+      "requires": {
+        "npc_affinity": 27,
+        "npc_trust": 22
+      },
+      "frequency": "lifetime",
+      "priority": 75,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_kail_1"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_kail_1"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_KAIL_2",
+      "title": "카일: 승부와 우정",
+      "description": "승부욕보다 서로의 건강과 존중을 우선한다",
+      "age_min": 14,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "kail",
+      "requires": {
+        "npc_affinity": 46,
+        "npc_trust": 38,
+        "flags": [
+          "arc_kail_1"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 76,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_kail_2"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_kail_2"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_KAIL_3",
+      "title": "카일: 다른 세계의 도전",
+      "description": "지구에서 이어갈 성실함을 응원한다",
+      "age_min": 17,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "kail",
+      "requires": {
+        "npc_affinity": 62,
+        "npc_trust": 53,
+        "flags": [
+          "arc_kail_2"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 77,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_kail_3"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_kail_3"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_NOAH_1",
+      "title": "노아: 작은 마을 모임",
+      "description": "축제 준비에서 사람들을 돕는다",
+      "age_min": 11,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "noah",
+      "requires": {
+        "npc_affinity": 27,
+        "npc_trust": 22
+      },
+      "frequency": "lifetime",
+      "priority": 75,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 10,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_noah_1"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_noah_1"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_NOAH_2",
+      "title": "노아: 다른 목소리 조율하기",
+      "description": "모임에서 소외된 사람이 없는지 확인한다",
+      "age_min": 14,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "noah",
+      "requires": {
+        "npc_affinity": 46,
+        "npc_trust": 38,
+        "flags": [
+          "arc_noah_1"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 76,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_noah_2"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_noah_2"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "L_NPC_NOAH_3",
+      "title": "노아: 남겨지는 모임의 미래",
+      "description": "지구로 떠난 뒤 공동체가 자립하도록 돕는다",
+      "age_min": 17,
+      "age_max": 19,
+      "months": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "npc": "noah",
+      "requires": {
+        "npc_affinity": 62,
+        "npc_trust": 53,
+        "flags": [
+          "arc_noah_2"
+        ]
+      },
+      "frequency": "lifetime",
+      "priority": 77,
+      "options": [
+        {
+          "id": "cooperate",
+          "text": "상대의 의견을 듣고 함께 해결한다",
+          "ap": 2,
+          "cost": 20,
+          "effects": {
+            "npc": {
+              "affinity": 7,
+              "trust": 7,
+              "intimacy": 5,
+              "conflict": -4
+            },
+            "relation": 2,
+            "happiness": 2,
+            "values": {
+              "empathy": 2
+            },
+            "flags": [
+              "arc_noah_3"
+            ]
+          }
+        },
+        {
+          "id": "efficient",
+          "text": "목표 달성을 우선하되 역할을 분담한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": 3,
+              "trust": 4,
+              "intimacy": 1,
+              "conflict": -1
+            },
+            "confidence": 2,
+            "flags": [
+              "arc_noah_3"
+            ]
+          }
+        },
+        {
+          "id": "insist",
+          "text": "내 주장만 고집해 빠르게 끝내려 한다",
+          "ap": 1,
+          "cost": 0,
+          "effects": {
+            "npc": {
+              "affinity": -5,
+              "trust": -7,
+              "intimacy": -2,
+              "conflict": 9
+            },
+            "confidence": 1,
+            "stress": 3
+          }
+        }
+      ]
+    }
+  ]
+}

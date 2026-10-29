@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.1",
+  "age_note": "모든 NPC는 주인공과 동년배 또는 1살 차이. 육성기에 성인 대상 행사/성적 내용 없음.",
+  "npcs": [
+    {
+      "id": "rian",
+      "name": "리안",
+      "age_offset": 0,
+      "facility": "academy",
+      "interest": "학술 토론",
+      "traits": [
+        "신중함",
+        "관찰력"
+      ],
+      "initial": {
+        "affinity": 25,
+        "trust": 26,
+        "intimacy": 10,
+        "conflict": 0
+      }
+    },
+    {
+      "id": "edwin",
+      "name": "에드윈",
+      "age_offset": 1,
+      "facility": "healing",
+      "interest": "돌봄과 자원봉사",
+      "traits": [
+        "다정함",
+        "책임감"
+      ],
+      "initial": {
+        "affinity": 23,
+        "trust": 28,
+        "intimacy": 12,
+        "conflict": 0
+      }
+    },
+    {
+      "id": "sion",
+      "name": "시온",
+      "age_offset": 0,
+      "facility": "workshop",
+      "interest": "마도 기계 제작",
+      "traits": [
+        "호기심",
+        "솔직함"
+      ],
+      "initial": {
+        "affinity": 22,
+        "trust": 24,
+        "intimacy": 9,
+        "conflict": 0
+      }
+    },
+    {
+      "id": "eden",
+      "name": "이든",
+      "age_offset": 0,
+      "facility": "theater",
+      "interest": "예술과 공연",
+      "traits": [
+        "감수성",
+        "표현력"
+      ],
+      "initial": {
+        "affinity": 27,
+        "trust": 23,
+        "intimacy": 12,
+        "conflict": 0
+      }
+    },
+    {
+      "id": "kail",
+      "name": "카일",
+      "age_offset": 1,
+      "facility": "knights",
+      "interest": "훈련과 스포츠",
+      "traits": [
+        "성실함",
+        "경쟁심"
+      ],
+      "initial": {
+        "affinity": 20,
+        "trust": 25,
+        "intimacy": 8,
+        "conflict": 0
+      }
+    },
+    {
+      "id": "noah",
+      "name": "노아",
+      "age_offset": 0,
+      "facility": "guild",
+      "interest": "축제와 지역 공동체",
+      "traits": [
+        "사교성",
+        "기획력"
+      ],
+      "initial": {
+        "affinity": 26,
+        "trust": 24,
+        "intimacy": 10,
+        "conflict": 0
+      }
+    }
+  ]
+}
