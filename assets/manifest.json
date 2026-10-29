@@ -1,7 +1,7 @@
 {
-  "version": "1.9.2-phase1",
+  "version": "1.9.6",
   "art_style": "Japanese anime visual novel",
-  "status": "concept-only; not final character canon",
+  "status": "phase-1 vector backgrounds and icons committed; character sprites and audio pending",
   "assets": [
     {
       "id": "concept_visual_board",
@@ -9,6 +9,48 @@
       "type": "concept",
       "integrated": false,
       "note": "Visual direction only. Text and NPC names in generated image are not canonical."
+    },
+    {
+      "id": "astelia-night",
+      "path": "assets/backgrounds/astelia-night.svg",
+      "type": "background",
+      "integrated": false,
+      "license": "original MGL asset"
+    },
+    {
+      "id": "astelia-dawn",
+      "path": "assets/backgrounds/astelia-dawn.svg",
+      "type": "background",
+      "integrated": false,
+      "license": "original MGL asset"
+    },
+    {
+      "id": "earth-city",
+      "path": "assets/backgrounds/earth-city.svg",
+      "type": "background",
+      "integrated": false,
+      "license": "original MGL asset"
+    },
+    {
+      "id": "star",
+      "path": "assets/icons/star.svg",
+      "type": "icon",
+      "integrated": false,
+      "license": "original MGL asset"
+    },
+    {
+      "id": "earth",
+      "path": "assets/icons/earth.svg",
+      "type": "icon",
+      "integrated": false,
+      "license": "original MGL asset"
+    },
+    {
+      "id": "bond",
+      "path": "assets/icons/bond.svg",
+      "type": "icon",
+      "integrated": false,
+      "license": "original MGL asset"
     }
   ],
   "planned": [
